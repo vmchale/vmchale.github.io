@@ -1,0 +1,1706 @@
+\documentclass{book}
+\usepackage{amsmath}
+%\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+%this uses symbols for footnotes
+%\usepackage{amssymb}
+%some extra symbols
+\usepackage{amsfonts}
+%\usepackage{endnotes}
+%fraktur and blackboard bold
+%\usepackage{mathrsfs}
+%for laplace transform l's
+\begin{document}
+\title{Methods of the absolute differential calculus and their applications}
+\author{M. M. G. Ricci and T. Levi-Civita\\
+Translated by V. V. McHale}
+\date{}
+\maketitle
+\tableofcontents
+\subsection*{Translator's notes}
+I have updated the formulas to use Einstein summation. I have tried to update the terminology to be in line with what a modern mathematician would use. I have not attempted to change the sentence structure or content of this treatise (this is in contrast to a previous translation), however, commentary is present in the footnotes to explain the modern view or expand on what was said.
+\subsection*{Preface}
+Poincar\'{e} wrote that in the mathematical Sciences \emph{a good notation has the same philosophical importance as a good classification in the natural Sciences}\footnote{Preface to \emph{Oeuvres de Laguerre} published under the auspices of \emph{L'Acad\'{e}mie des Sciences}}. Evidently, this can be said of many methods, as the possibility of \emph{forcing} (to again use the words of the illustrious French geometer) \emph{a multitude of facts without any apparent link to group themselves according to their natural affinities}.
+
+We can also say that a theorem demonstrated by circuitous routes and having recourse in artifices and considerations that have no essential link with it is very often a truth discovered only halfway; as it almost always happens the same theorem presents itself in a more complete and general manner, if we get there by a more direct path and more appropriate means\footnote{This provides a suitable rebuttal to engineers and scientists who claim that mathematics has become too focused on abstraction.}.
+
+Let us take as an example the demonstration given by Jacobi and extended by Beltrami of the invariance of $\Delta U$. It is certainly elegant and testifies to the penetrating mind of its author, but, we are surprised that, to demonstrate a theorem which by its nature belongs to the algebraic theory of elimination, we have to deal with the variation of an integral. It is with this remark and the possibility known \emph{a priori} of extending the theory of differential parameters of the second order to that of invariants of algebraic forms that we owe our research that brought the discovery of these methods, which we call the \emph{Absolute differential calculus}.\footnote{Cfr. \emph{Ricci} ``Sui parametri e gli invarianti delle forme quadratiche differenziali,'' Annali de mathematica pura ed applicata, Series II\textsuperscript{a}, Volume XIV, 1886.} The first result was the discovery of a whole chain of differential invariants containing one or more arbitrary functions.
+
+The algorithm of the absolute differential calculus, that is to say, the concrete tools of these methods is found entirely in one remark by Christoffel:\footnote{``Ueber die Transformation der homogen Differentialausdr\"{u}cke zweiten Grades,'' Crelle's Journal, Volume LXX, 1869.} ``But the methods themselves and the benefits, which they present, have their \emph{rasion d'\^{e}tre} and source in intimate relationships that link them to the notion of an $n$-dimensional manifold (which we owe to Gauss and Riemann).''
+
+According to this notion of a manifold $V_n$ is defined intrinsically in its metric properties by $n$ independent variables and by an equivalence class of quadratic forms of differentials of these variables; therefore, any two are transformable from one to the other by a point transformation. In consequence, any $V_n$ will remain invariant with respect to any coordinate transform. The absolute differential calculus, in acting on covariant and contravariant forms of $ds^2$ in $V_n$ to derive others of the same nature, is itself in its formulas and results independent of the choice of independent variables. Being of the sort essentially attached to $V_n$, it is the natural instrument of all research that studies one such manifold or in which we encounter a positive quadratic form of differentials of $n$ variables or their derivatives as the metric.
+
+The summary exposition, which we will give here of these methods and their applications, is aimed to convince the readers of the advantages, which we consider significant and evident; and to diminish, as much as possible, the efforts required. We think that, after having surmounted the difficulties of initiation, the reader will easily convince himself that the generality we gain in moving away from heterogeneous elements, which we introduce by attaching ourselves to a determined system of variables, contributes not only to the elegance, but also the agility and perspicuity of the conclusions.
+\chapter{The absolute differential calculus}
+\section{Point transformations and systems of functions}
+Let us denote by $T$ a general transformation of variables
+\begin{equation}
+x_i=x_i(y_1,y_2,\cdots,y_n)
+\end{equation}
+bijective and regular in its domain; by $\Omega$ a system of multiple functions \\$(f_1,f_2,\cdots,f_p)$ of the variables $x_i$; we call these functions \emph{elements} of the system $\Omega$. Let us also denote by S a substitution, which takes the system $\Omega$ and substitutes functions $g_1,g_2,\cdots,g_p$ of the $y_i$ for the $f_1,f_2,\cdots,f_3$.
+
+Let us consider $S$ as a function of $T$; that is to say, suppose that, for each transformation (1.1), which acts on the independent variables, we have a well-defined substitution $S$; and that $S$ considered as a function of $T$ is subjected to the following conditions:
+\begin{enumerate}
+	\item
+	If T is the identity transformation, the S is as well.
+	\item
+	If we designate three transformations $T_0,T_1,T_2$ (1.1), and $S_0,S_1,S_2$ the corresponding $S$s, and if we have $T_0\equiv T_1\cdot T_2$, then we also have $S_0\equiv S_1\cdot S_2$.
+\end{enumerate}
+There are many different ways of determining $S$ as a function of $T$. We can, for example (and this is what we do in general), take as elements of the transformed system those that take out the $x_i$ and replace them with their corresponding $y_i$. We say that in this case the system being considered is \emph{invariant}.
+
+But very often the nature of the given system will point to another law of transformation. For example, if $f_1,f_2,\cdots,f_n$ are the partial derivatives of a function $f$ with respect to $x_1,x_2,\cdots,x_n$, respectively, it is natural to take the derivatives $g_1,g_2,\cdots,g_n$ of the function $g$ as elements of the transformed system, which is transformed from $f$ by the transformation $T$; in lieu of the expressions obtained by transforming $f_1,f_2,\cdots,f_n$ by $T$.
+
+The substitution is this case will be defined by the formulas
+\begin{equation}
+g_r=f_s\frac{\partial x_s}{\partial y_r}, (r=1,2,\cdots,n)
+\end{equation}
+in which the functions $f_1,f_2,\cdots,f_n$ must be expressed in terms of the $y_s$ and the Einstein summation convention has been used.\footnote{When an index appear twice in subscripts or superscripts, we are to take the sum with respect to that index. For example, $\displaystyle a_ib_i=\sum_{i=1}^n{a_ib_i}$}
+
+If the given system results from a function $f$ with derivatives up to a given order, we can require that it will have at least as many derivatives after the transformation (1.1). In this case the analytical formulas, which represent the transformation law of the system are complicated. The function $f$ is invariant; its first derivatives transform by (1.2), the second derivatives by
+\begin{equation}
+\frac{\partial^2f}{\partial y_ry_s}=\frac{\partial^2f}{\partial x_px_q}\frac{\partial x_p}{\partial y_r}\frac{\partial x_q}{\partial y_s}+\frac{\partial f}{\partial x_p}\frac{\partial^2x_p}{\partial y_ry_s}
+\end{equation}
+
+We also get some remarkable examples by considering the coefficients of a linear and homogeneous expression of the  first-order derivatives, such as
+\begin{equation}
+A^{(r)}\frac{\partial f}{\partial x_r},
+\end{equation}
+and that of an expression quadratic and homogeneous in the differentials of the independent variables, such as
+\begin{equation}
+a_{rs}dx_rdx_s.
+\end{equation}
+
+Once we apply a transformation (1.1) on the independent variables, we must also change expressions (1.4) and (1.5) to their counterparts
+$$B^{(r)}\frac{\partial f}{\partial y_r},$$
+$$b_{rs}dy_rdy_s;$$
+the new coefficients $B^{(r)}$ and $$b_{rs}$$ being given by the formulas
+\begin{equation*}
+\tag{$1.4'$}
+B^{(r)}=A^{(s)}\frac{\partial y_r}{\partial x_s},
+\end{equation*}	
+\begin{equation*}
+\tag{$1.5'$}
+b_{rs}=a_{pq}\frac{\partial x_p}{\partial y_r}\frac{\partial x_q}{\partial y_s}
+\end{equation*}
+
+It is thus natural, when working with systems of coefficients of expressions (1.4) and (1.5), to substitute ($1.4'$) and ($1.5'$) each time we apply a transformation (1.1) to the independent variables.
+
+We conclude that it is often appropriate to substitute for the law of invariance other laws of transformation suggested by the nature of the systems, which we will study.
+\section{Covariant and contravariant tensors}
+Out of all the transformations that can be conceived, there are two, which play a predominant role in Mathematical Analysis; these are the laws which we call \emph{covariance} and \emph{contravariance}, which we will occupy ourselves with. We say that a system $\Omega$ of functions of $n$ variables $x_1,x_2,\cdots,x_n$ is of the $m^{th}$ order if we have one element for each arrangement with repetition of $m$ integers allowed to range from 1 to $n$. A single function will be, as a limiting case, a system of the $0^{\text{th}}$ order. For the cases $m=1,2,\cdots$ we have a \emph{simple} system, a \emph{double} system, etc. The first derivatives of a function and the coefficients of a linear and homogeneous expression relative to these derivatives are examples of systems of the first order. We get a double system if we consider the second derivative of a function, or the coefficients of a quadratic in the independent variables; and, in general, an $m^{\text{th}}$ order system could be constructed, for example, from the derivatives of the same order of an arbitrary function.
+
+We say a system of order $m$ is a \emph{covariant tensor field} (in this case we designate its elements $X_{r_1r_2\cdots r_m}$ where $r_1,r_2,\cdots,r_m$ can take any of the values $1,2,\cdots,n$) if the elements of the transformed system $Y_{r_1r_2\cdots r_m}$ are given by the formulas
+\begin{equation}
+Y_{r_1r_2\cdots r_m}=X_{s_1s_2\cdots s_m}\frac{\partial x_{s_1}}{\partial y_{r_1}}\frac{\partial x_{s_2}}{\partial y_{r_2}}\cdots\frac{\partial x_{s_m}}{\partial y_{r_m}}
+\end{equation}
+On the other hand, a \emph{contravariant tensor field} will be denoted $X^{(r_1r_2\cdots r_m)}$, and the transformation is given by
+\begin{equation}
+Y^{(r_1r_2\cdots r_m)}=X^{(s_1s_2\cdots s_m)}\frac{\partial y_{r_1}}{\partial x_{s_1}}\frac{\partial y_{r_2}}{\partial x_{s_2}}\cdots\frac{\partial y_{r_m}}{\partial x_{s_m}}
+\end{equation}
+The elements $X$ and $Y$ refer respectively to the variable $x$ and $y$. It should be understood that in (1.6) and (1.7) everything is expressed in terms of the $y$ variables.
+
+Designating by $X$ any function of the $x$ variables, and by $Y$ the same function expressed in terms of the $y$ variables, the formula
+$$Y=X$$
+can be regarded equally as a special case of (1.6) or (1.7). Because of this, a tensor field of order 0, although invariant, can also be considered as a limiting case of a covariant or contravariant tensor field.
+
+Hereinafter, we shall agree that a symbol such as $X_{r_1r_2\cdots r_m}$ (or $X^{(r_1r_2\cdots r_m)}$) shall refer to any element of a covariant (or contravariant) tensor field of order $m$.
+
+The first derivatives of a function and the coefficients of a quadratic form $\varphi$, by the formulas (1.2) and ($1.5'$), give us examples of covariant tesnor fields of the first and second order, respectively. We have on the other hand examples of contravariant tensor fields by considering the coefficients of an expression that is linear in the first derivatives of a function and the coefficients of the reciprocal form of $\varphi$. The same formulas
+$$dy_r=dx_s\frac{\partial y_r}{\partial x_s}$$
+tell us that the differentials of independent variables are the elements of a contravariant tensor field of the first order.
+
+Systems which are comprised of derivatives of order $m>1$ of a function of independent variables (such as the results of (1.3) for $m=2$) are neither covariant nor contravariant. The transformations laws of these systems is complicated, and it is there we encounter the source of difficulties in the absolute differential calculus regarding transforming expressions in terms of higher-order derivatives.
+
+We shall see that we can avoid these difficulties by substituting a new operation for ordinary differentiation that can replace it.
+
+It is useful to remark that covariant and contravariant tensor fields from the theory of algebraic forms are particular cases of those which we have just defined. In effect, the transformations (1.1), which we consider in the theory of algebraic forms, are linear and homogeneous; once a transformation of this nature acts on the independent variables, the coefficients of point forms transform according to formula (1.6) and those of reciprocal forms by (1.7).
+\section{Addition, multiplication, and composition of tensor fields}
+\emph{Addition}. If $X_{r_1r_2\cdots r_m}$ and $\Xi_{r_1r_2\cdots r_m}$ are two covariant tensor fields of the same order $m$,
+$$Y_{r_1r_2\cdots r_m}=X_{r_1r_2\cdots r_m} + \Xi_{r_1r_2\cdots r_m}$$
+is also a covariant tensor field of order $m$. We say that it is the sum of the considered tensor fields. In an analogous manner we define the sum of two contravariant tensor fields of the $m^{th}$ order, which will also be contravariant of this order.
+
+\emph{Multiplication}. If $X_{r_1r_2\cdots r_m}$, $\Xi_{s_1s_2\cdots s_p}$ are two covariant tesnor fields of order $m$ and $p$, respectively, 
+$$Y_{r_1r_2\cdots r_ms_1s_2\cdots s_p}=X_{r_1r_2\cdots r_m} \cdot \Xi_{s_1s_2\cdots s_p}$$
+is a tensor field covariant of the $(m+p)^{\text{th}}$ order, which we call the product of these two systems. It suffices to substitute the word \emph{contravariant} for the word \emph{covariant} to get the definition of the product of two contravariant tensor fields of arbitrary order.
+
+These definitions fit in quite naturally with the sum and product of many tensors of the same nature, covariant or contravariant.
+
+\emph{Contraction.} If $X_{r_1r_2\cdots r_ms_1s_2\cdots s_p}$ is a covariant tensor field of arbitrary order $m+p$, and $\Xi^{(s_1s_2\cdots s_p)}$ is a tensor field contravariant of the $p^{\text{th}}$ order, the tensor field of order $m$
+$$Y_{r_1r_2\cdots r_m}=\Xi^{(s_1s_2\cdots s_p)}X_{r_1r_2\cdots r_ms_1s_2\cdots s_p}$$
+is covariant of order $m$. In an analogous manner, if we are given two tensor fields $X^{(r_1r_2\cdots r_ms_1s_2\cdots s_p)}$ and $\Xi_{s_1s_2\cdots s_p}$, we get a covariant tensor field of order $m$ by taking
+$$Y^{s_1s_2\cdots r_m}=X^{r_1r_2\cdots r_ms_1s_2\cdots s_p}\Xi_{s_1s_2\cdots s_p}$$.
+We say that the tensor field $Y_{r_1r_2\cdots r_m}$ (or $Y^{(r_1r_2\cdots r_m)}$) is the \emph{contraction} of the two considered tensor fields.
+
+In particular, for $m=0$, we have a $0^{\text{th}}$ order tensor field, i.e., an invariant, which results from the contraction of two tensors of opposite nature but equal order.
+
+The reader can easily imagine these propositions, which are frequently used in the calculus, as derived from a single principle, that of the \emph{saturation of indices}.
+
+\begin{center}
+	\emph{The metric}
+\end{center}
+
+The methods of the absolute differential calculus are based essentially on the consideration of a positive quadratic form in the differentials of $n$ independent variables $x_1,x_2,\cdots,x_n$; that is to say, an expression of the type:
+$$\varphi=a_{rs}dx_rdx_s$$.
+
+The coefficients of this expression, which we shall call the \emph{metric tensor} is found everywhere in our formulas, and holds remarkable symmetry and simplicity.
+
+\begin{center}
+	\emph{Reciprocal Systems}
+\end{center}
+
+If we designate the coefficients of the reciprocal form of $\varphi$ by $a^{(rs)}$, we have the identities
+$$a^{(rs)}=a^{(rp)}a^{(sq)}a_{pq}.$$
+In general, if we are given a covariant tensor field of the $m^{\text{th}}$ order, $X_{r_1r_2\cdots r_m}$, we can get a contravariant tensor field of the same order using the fundamental form by considering
+\begin{equation}
+	X_{(r_1r_2\cdots r_m)}=a^{(r_1s_1)}a^{(r_2s_2)}\cdots a^{(r_ms_m)}X_{s_1s_2\cdots s_m}
+\end{equation}
+
+Similarly, if we have a contravariant tensor field $\Xi^{(r_1r_2\cdots r_m)}$, we can get a covariant system by considering
+\begin{equation}
+	\Xi_{r_1r_2\cdots r_m}=a_{r_1s_1}a_{r_2s_2}\cdots a_{r_ms_m}\Xi^{(s_1s_2\cdots s_m)}
+\end{equation}
+
+The sequence of operations (1.8) and (1.9) is identity, and it is because of this that we call $X^{(r_1r_2\cdots r_m)}$ and $X_{r_1r_2\cdots r_m}$, or $\Xi_{r_1r_2\cdots r_m}$ and $\Xi^{(r_1r_2\cdots r_m)}$ reciprocal tensor fields relative to the Riemannian metric. 
+
+By formulas (1.8) and (1.9), we can easily get
+\begin{equation}
+X^{(r_1r_2\cdots r_m)}\Xi_{r_1r_2\cdots r_m}=X_{r_1r_2\cdots r_m}\Xi^{(r_1r_2\cdots r_m)},
+\end{equation}
+which tells us that:
+
+\emph{Any invariant contracted from a covariant tensor field and a contravariant tensor field of the same order is identical to the invariant contracted from their reciprocals.}
+
+Since the Riemannian metric is fixed, it suffices to give a covariant or contravariant tensor field and we will have a well-defined reciprocal. This fact manifests itself in our notation, which we have already applied in our examples, by which the same letter represents an arbitrary element of an $m^{\text{th}}$ order covariant tensor field or its reciprocal, depending on whether the indices are above or below the letter.
+
+We shall now use $a$ to denote the discriminant of the Riemannian metric. No matter its form, we can derive two tensor fields of the $n^{\text{th}}$ order relative to it which are often useful in calculus and possess quite remarkable properties. Let us set the sign of $\sqrt{a}$ for a system of $n$ independent variables, and let us agree that this sign changes not by a substitution (1.1) acting on the independent variables, but according as the Jacobian of the $x$ variables relative to the $y$ variables is positive or negative. The tensor field of order $n$ such that the elements $\epsilon_{r_1r_2\cdots r_n}$ are zero when the indices are not all different, and equal to $\sqrt{a}$ or $-\sqrt{a}$ according as the permutation $(r_1r_2\cdots r_n)$ is even or odd relative to the fundamental permutation $(1,2,\cdots,n)$, is covariant. The elements $\epsilon^{(r_1r_2\cdots r_n)}$ of the reciprocal system are equal to $0$ or $\pm\frac{1}{\sqrt{a}}$.
+
+If we designate by $\Delta$ the Jacobian of $n$ functions $z_1,z_2,\cdots,z_n$ taken with respect to the $n$ variables $x_1,x_2,\cdots,x_n$ and divided by $\sqrt{a}$, we get the identity
+$$\Delta(z_1z_2\cdots z_n)\equiv\epsilon^{(r_1r_2\cdots r_n)}\frac{\partial z_1}{\partial x_{r_1}}\frac{\partial z_2}{\partial x_{r_2}}\cdots\frac{\partial z_n}{\partial x_{r_n}},$$
+which, in addition to making the invariant properties of $\Delta$ intuitive, also makes this invariant treatable with the methods of the absolute differential calculus. 
+
+We shall call the tensor field $\epsilon_{r_1r_2\cdots r_n}$ (or $\epsilon^{(r_1r_2\cdots r_n)}$) as the covariant (or contravariant) tensor field $E$.
+
+\section{Applications of vector analysis}
+
+We will now give an important application of the absolute differential calculus by examining the rules of the vector calculus in generalized coordinates. 
+
+Let us consider arbitrary orthogonal Cartesian coordinates $y_1,y_2,\cdots,y_3$ in our space, and let us denote by $(R)$ a vector in this space. In the $y$ coordinates, the Riemannian metric will be:
+$$\varphi=dy_1^2+dy_2^2+dy_3^2,$$
+and, in generalized coordinates
+$$\varphi=a_{rs}dx_rdx_s.$$
+
+Let us take $l_r$ $(r=1,2,3)$ to be vectors in the directions of the coordinate axes and $n_r$ $(r=1,2,3)$ to be vectors normal to the coordinate surfaces of the parameter $x_r$, these directions being fixed such that a infinitesimal displacement in the direction of $l_r$ or $n_r$ gives us a positive increment in $x_r$.
+
+Since a characteristic property of orthogonal co\"ordinates is that they are at the same time covariant and contravariant, the components of a vector $(R)$ along three orthogonal axes can be considered at the same time elements of a covariant or contravariant tensor relative to any change of axes.
+
+With this goal in mind, we consider two reciprocal tensors $X_r$ and $X^{(r)}$, whose components coincide with the projections, denoted $Y_r$ and $Y^{(r)}$, of $(R)$ on the coordinate axes in the case of Cartesian coordinates. 
+
+Since the projection onto an arbitrary right angle of a closed polygon is null, by considering the polygons having $R$ and its components along the $y_1,y_2,y_3$ axes as sides, or along the $l_r$ directions, or the $n_r$, we get the formulas\footnote{in (1.13 and 1.14), summation is with respect to $r$}:
+
+\begin{equation}
+\bar{R}_{l_r}=Y_s\cos(l_r,y_s),
+\end{equation}
+\begin{equation}
+\bar{R}_{n_r}=Y^{(s)}\cos(n_r,y_s),
+\end{equation}
+\begin{equation}
+Y^{(s)}=R_{l_r}\cos(l_r,y_s),
+\end{equation}
+\begin{equation}
+Y_s=R_{n_r}\cos(n_r,y_s);
+\end{equation}
+or, by substituting the well-known expressions for the direction cosines of the $l_r$ and $n_r$\footnote{there is no Einstein summation in $(1.11')$ and $(1.12')$.},
+\begin{equation*}
+\tag{$1.11'$}
+\sqrt{a_{rr}}\cdot\bar{R}_{l_r}=Y_{s}\frac{\partial y_s}{\partial x_r},
+\end{equation*}
+\begin{equation*}
+\tag{$1.12'$}
+\sqrt{a^{(rr)}}\cdot\bar{R}_{n_r}=Y^{(s)}\frac{\partial x_r}{\partial y_s},
+\end{equation*}
+\begin{equation*}
+\tag{$1.13'$}
+Y^{(s)}=\frac{1}{\sqrt{a_{rr}}}R_{l_r}\frac{\partial y_s}{\partial x_r},
+\end{equation*}
+\begin{equation*}
+\tag{$1.14'$}
+Y_s=\frac{1}{\sqrt{a^{(rr)}}}R_{n_r}\frac{\partial x_r}{\partial y_s}.
+\end{equation*}
+By the covariant and contravariant natures of the systems $X_r$ and $X^{(r)}$, we also get the formulas
+$$X_r=Y_s\frac{\partial y_s}{\partial x_r},$$
+$$X^{(r)}=Y^{(s)}\frac{\partial x_r}{\partial y_s},$$
+and the equivalent formulas
+$$Y^{(s)}=X^{(r)}\frac{\partial y_s}{\partial x_r},$$
+$$Y_s=X_r\frac{\partial x_r}{\partial y_s};$$
+these, with ($1.11'$), $(1.12')$, $(1.13')$, and $(1.14')$ give\footnote{Einstein summation is not used here}
+\begin{equation}
+\bar{R}_{l_r}=\frac{X_r}{\sqrt{a_{rr}}},
+\end{equation}
+\begin{equation}
+\bar{R}_{n_r}=\frac{X^{(r)}}{\sqrt{a^{(rr)}}}
+\end{equation}
+\begin{equation}
+R_{l_r}=\sqrt{a_{rr}}\cdot X^{(r)},
+\end{equation}
+\begin{equation}
+R_{n_r}=\sqrt{a^{(rr)}}\cdot X_r.
+\end{equation}
+We can deduce that:
+
+\emph{Two reciprocal tensors of the first order being given, we can, no matter the coordinates $x_1,x_2,x_3$ of the space, regard the expressions\footnote{No Einstein summation in these expressions.} $\frac{X_r}{\sqrt{a_{rr}}}$ and $\frac{X^{(r)}}{\sqrt{a^{(rr)}}}$ as the orthogonal projections of a vector on the tangents to the coordinate lines of the $x_r$ on the normal surfaces of the $x_r$, while the expressions $\sqrt{a_{rr}}\cdot X^{(r)}$ and $\sqrt{a^{(rr)}}\cdot X_r$ represent the components of the vector along the axes and the normals, respectively.}
+
+\section{Covariant and contravariant differentiation}
+\emph{Covariant differentiation.} Christoffel\footnote{Ueber die Transformation der homogen Differentialausdru\"ucke zweiten Grades, Crelle's Journal, Volume LXX, 1869.} was the first to remark that if a tensor of order $m$, $X_{r_1r_2\cdots r_m}$, is covariant, the system of the $(m+1)^{\text{st}}$ order\footnote{Here the Christoffel symbol $\Gamma_{ij}^m=\frac{1}{2}a^{(km)}\left(\frac{\partial a_{ik}}{\partial x_j}+\frac{\partial a_{jk}}{\partial x_i}-\frac{\partial a_{ij}}{\partial x_k}\right)$ is used, $a_{rs}$ being the metric tensor.}
+\begin{equation}
+X_{r_1r_2\cdots r_m,r_{m+1}}=\frac{\partial X_{r_1r_2\cdots r_m}}{\partial x_{r_{m+1}}}-\sum_{l=1}^m\Gamma^q_{r_lr_{m+1}}X_{r_1r_2\cdots r_{l-1}qr_{l+1}\cdots r_m}
+\end{equation}
+is also covariant\footnote{Note that we have used the convention that a comma preceding a variable indicates differentiation with respect to that variable.}. We say that \emph{covariant differentiation} with respect to the metric $\varphi$ is the process of going from the given tensor $X_{r_1r_2\cdots r_m}$ to the tensor $X_{r_1r_2\cdots r_m,r_{m+1}}$; we say that this is the \emph{first derivative with respect to the metric}
+
+For $m=0$, we have, as a limiting case, that the first derivative of a $0^{\text{th}}$ order system results in the derivatives of this function, irrespective of the metric, and we therefore put
+\begin{equation*}
+\tag{$1.19'$}
+X_{,r}=\frac{\partial X}{\partial x_r}.
+\end{equation*}
+In the same fashion, we get the first derived system of a $1^{st}$ order system $X_r$ by taking
+\begin{equation*}
+\tag{$1.19''$}
+X_{r,s}=\frac{\partial X_r}{\partial x_s}-\Gamma^q_{rs}X_q,
+\end{equation*}
+and that of a $2^{\text{nd}}$ order system by taking
+\begin{equation*}
+\tag{$1.19'''$}
+X_{rs,t}=\frac{X_{rs}}{x_t}-\Gamma^q_{rt}X_{qs}-\Gamma^q_{st}X_{rq}.
+\end{equation*}	
+For $X_{rs}\equiv a_{rs}$, we have the identities
+$$a_{rs,t}\equiv0,$$
+which tell us that:
+
+\emph{The first derivative with respect to a Riemann metric $\varphi$ of the metric tensor is identically zero.}
+
+By applying the formulas (1.19) to the covariant tensor $E$ defined in section 3, we see that:
+
+\emph{The first derivative of the covariant tensor $E$ with respect to an arbitrary metric is $0$.}
+
+It goes without saying that by $p$ covariant differentiations with respect to $\varphi$, we can go from a given $m^{\text{th}}$ order tensor to a $(m+p)^{\text{th}}$ order tensor ($p$ being an arbitrary whole number) which will be the $p^{\text{th}}$ derived tensor with respect to the metric.
+
+For example, in going from a $0^{\text{th}}$ order system, that is to say, a function, by applying in succession the formulas $(1.19')$, $(1.19'')$, etc., we can get the derived system of the first order, second order, etc. In extending the phraseology to higher orders, we sometimes call the elements $X_{r,s}$, $X_{r,st}$, etc. the \emph{covariant derivatives} of the second order, third order, etc. of the function $X$.
+
+Using the well-known properties of Christoffel symbols and $(1.19'')$, we can say that:
+
+\emph{If a covariant system of the first order results from the derivatives of a function with respect to the independent variables, its first derivative with respect to an arbitrary Riemann metric is symmetric; and conversely.}
+
+By the formulas (1.19), the derivatives of the elements of an arbitrary covariant system are linear functions of these elements and those of its first covariant derivative with respect to an arbitrary Riemann metric. We can therefore eliminate the derivatives of a given covariant system from our calculations, by using instead the elements of its first derived system. More generally, we can replace the derivatives of higher order of the elements of an $m^{th}$ order ($m$ arbitrary) covariant system (and in particular for $m=0$ those of an arbitrary function), by using the elements of the derived system of the same order. We have from here on the advantage of only considering only those systems, that that transform according to a uniform law, which is much simpler than those, that govern the transformations of the higher order derivatives of a covariant system (and in particular of one function), laws, that we can deduce from ordinary differentiation of the formulas (1.6).
+
+We shall see later that it is precisely because of the law of transformation of covariant systems that we owe the invariant nature of the formulas and equations, that we have established by the procedures of the absolute differential calculus. 
+
+\emph{Contravariant differentiation.} --- A contravariant system $X^{(r_1r_2\cdots r_m)}$ being given, we can use the Riemman metric to transform first to the reciprocal relative to this metric, $X_{r_1r_2\cdots r_m}$, then take  the covariant derivative with respect to $\varphi$ to get $X_{r_1r_2\cdots r_m,r_{m+1}}$, and then finally to transform to the reciprocal system $X^{(r_1r_2\cdots r_m,r_{m+1})}$. --- We call \emph{contravariant differentiation} with respect to $\varphi$ the operation, by which, with the help of the metric, we go from a system $X^{(r_1r_2\cdots r_m)}$ to the system $X^{(r_1r_2\cdots r_m,r_{m+1})}$, which we call the first derived system with respect to $\varphi$.
+
+The elements of the first derived system are function of the system and the coefficients of the metric\footnote{Note that we are taking Einstein summation with respect to $t$}.
+\begin{equation}
+X^{(r_1r_2\cdots r_m,r_{m+1})}=a^{(tr_{m+1})}\left(\frac{\partial X^{(r_1r_2\cdots r_m)}}{\partial x_t}+\sum_{l=1}^m\Gamma^{r_l}_{tq}X^{(r_1r_2\cdots r_{l-1}qr_{l+1}\cdots r_m)}\right).
+\end{equation}
+
+We can make analogous statements on the subject of contravariant differentiation, mirroring those that we just studied on the subject of covariant differentiation. For example, it is evident that, the systems $a_{rs,t}$ and $E_{r_1r_2\cdots r_m,r_{m+1}}$ being identically zero, we can deduce the same fact about the systems $a^{(rs,t)}$ (first derived system of $a^{(rs)}$) and $E^{(r_1r_2\cdots r_m,r_{m+1})}$ (the first derived system of a contravariant system $E$).
+
+We can say that there exists a law of reciprocity or duality, which permits us to find a corresponding theorem or formula of the absolute differential calculus or reciprocal theorem, by exchanging the word \emph{covariant} and \emph{contravariant}, and by taking the indices from the covariant position to the contravariant and vice versa. 
+
+\emph{Rules of calculation.} --- The well-known rules, which enable the calculation of derivatives of sums and products of functions, extend naturally to covariant and contravariant differentiation. In fact, using formulas (1.19) for covariant differentiation of systems such as
+$$Y_{r_1r_2\cdots r_m}=X_{r_1r_2\cdots r_m}+\Xi_{r_1r_2\cdots r_m},$$	
+$$Y_{r_1r_2\cdots r_ms_1s_2\cdots s_p}=X_{r_1r_2\cdots r_m}\Xi_{s_1s_2\cdots s_p},$$
+we arrive at the identities
+$$Y_{r_1r_2\cdots r_m,r_{m+1}}=X_{r_1r_2\cdots r_m,r_{m+1}}+\Xi_{r_1r_2\cdots r_m,r_{m+1}},$$
+$$Y_{r_1r_2\cdots r_ms_1s_2\cdots s_p,r_{m+1}}=X_{r_1r_2\cdots r_m,r_{m+1}}\Xi_{s_1s_2\cdots s_p}+X_{r_1r_2\cdots r_m}\Xi_{s_1s_2\cdots s_p,r_{m+1}};$$
+which works out analogously for contravariant systems; and for the differentiation of systems that are sums of an arbitrary number of terms, or products of an arbitrary number of factors. 
+
+Consider a system contracted from two other, such as
+$$Y_{r_1r_2\cdots r_m}=\Xi^{(s_1s_2\cdots s_p)}X_{r_1r_2\cdots r_ms_1s_2\cdots s_p}.$$
+By applying the formulas (1.19) and (1.20), we find that the elements of the first derived system are given by:
+\begin{align}
+Y_{r_1r_2\cdots r_m,r_{m+1}}&=\Xi^{(s_1s_2\cdots s_p)}X_{r_1r_2\cdots r_ms_1s_2\cdots s_p,r_{m+1}}\nonumber
+\\&+\Xi^{(s_1s_2\cdots s_p,t)}a_{tr_{m+1}}X_{(r_1r_2\cdots r_ms_1s_2\cdots s_p)}.
+\end{align}
+We also have a reciprocal formula for differentiation of contracted contravariant systems. 
+
+For an invariant such as
+$$Y=\Xi^{(r_1r_2\cdots r_m)}X_{r_1r_2\cdots r_m},$$
+we have
+$$Y_{,s}=\Xi^{(r_1r_2\cdots r_m)}X_{(r_1r_2\cdots r_m,s)}+\Xi^{(r_1r_2\cdots r_m,t)}a_{ts}X_{r_1r_2\cdots r_m},$$
+and, by substituting for the systems $\Xi^{(r_1r_2\cdots rm_m,t)}$ and $X_{r_1r_2\cdots r_m}$ with their reciprocals,
+\begin{equation}
+Y_{,s}=\Xi^{(r_1r_2\cdots r_m)}X_{r_1r_2\cdots r_m,s}+X^{(r_1r_2\cdots r_m)}\Xi_{r_1r_2\cdots r_m,s}.
+\end{equation}
+In particular, to differentiate an invariant, such as
+$$Y=\Xi^{(r)}X_r,$$
+we have the formulas
+\begin{equation*}
+\tag{1.22'}
+Y_{,s}=\Xi^{(r)}X_{rs}+X^{(r)}\Xi_{rs}.
+\end{equation*}
+Let us consider the invariant
+$$(\Delta_1f)^2=f^{(r)}f_r,$$
+$f$ being an arbitrary function of $x_1,x_2,\cdots,x_n$. We have once again
+$$\Delta_1f\cdot\frac{\partial\Delta_1f}{\partial x_s}=f^{(r)}f_{rs}.$$
+\section{Riemann's system. Second covariant derivatives}
+Suppose
+$$\varphi=a_{rs}dx_rdx_s$$
+is the Riemannian metric and consider
+$$2a_{rs,t}=\frac{\partial a_{rt}}{\partial x_s}+\frac{\partial a_{st}}{\partial x_r}-\frac{\partial a_{rs}}{\partial x_r},$$
+$$a_{rs,tu}=\frac{\partial a_{rt,s}}{\partial x_u}-\frac{\partial a_{ru,s}}{\partial x_t}+a^{(pq)}(a_{ru,p}a_{st,q}-a_{rt,p}a_{su,q})$$
+The symbols $a_{rs,tu}$ are the elements of a covariant system of the $4^{th}$ order, and are extremely important in the theory of Riemannian metrics. We find them in Riemann's \emph{Commentario mathematica}\footnote{Gesammelte Werke, p. 270} (to within a factor) and it is because of this that we call this system \emph{Riemann's covariant system}\footnote{Now known as the Riemann curvature tensor}. --- The expressions $a_{rs,tu}$ were encountered prior to the cited works of Riemann by Christoffel\footnote{``Ueber die Transformation der homogen Differentialausdru\"ucke zweiten Grades,'' Crelle's Journal, Vol. LXX, 1869. See also, in the same volume, ``Untersuchugen in Betreff der ganzen homogen Functionen von $n$ differentialen'' by Lipschitz.}, who illuminated the important properties. It will suffice here to consider the expressions which are linearly independent, which number $N=\frac{n^2(n^2-1)}{12}$
+
+In particular, for $n=1$, if suffices to consider the expression $a_{12,12}$, or the ratio $\frac{a_{12,12}}{a}$, denoted $G$, which is the well-known Gaussian curvature. 
+
+For $n=3$, we have $N=6$. In this case, the formulas gain symmetry if it is agreed that we can exchange two indices when their difference is divisible by 3. --- We now introduce this convention once and for all. --- The elements of Riemann's covariant system which are linearly independent can thus be brought to the form $a_{r+1r+2,s+1s+2}$, and by taking 
+$$a^{(rs)}=\frac{a_{r+1r+2,s+1s+1}}{a},$$
+we get a contravariant system. We shall call this Riemann's contravariant system and it (or its reciprocal $a_{rs}$ can, for the case $n=3$, replace the covariant system $a_{rs,ru}$.
+
+That being said, suppose we are given an arbitrary covariant system \\$X_{r_1r_2\cdots r_m}$; let us consider its second derived system $X_{r_1r_2\cdots r_m,r_{m+1}r_{m+2}}$. We have the identities
+\begin{equation}
+X_{r_1r_2\cdots r_m,r_{m+1}r_{m+2}}-X_{r_1r_2\cdots r_m,r_{m+1}r_{m+2}}=a^{(pq)}a_{r_{m+1}r_{m+2},r_lp}X_{r_1\cdots r_{l-1}qr_{l+1}\cdots r_m},
+\end{equation}
+which tell us that the element $X_{r_1r_2\cdots r_m,r_{m+1}r_{m+2}}$ is not in general equal to the element $X_{r_1r_2\cdots r_m,r_{m+2}r_{m+1}}$.
+
+In particular, for $n=2$, formulas (1.23) can be replaced by
+\begin{equation*}
+\tag{1.23'}
+\epsilon^{(rs)}X_{r_1r_2\cdots r_m,rs}=G\cdot\sum_{l=1}^ma^{(rs)}\epsilon_{rr_l}X_{r_1\cdots r_{l-1}sr_{l+1}\cdots r_m},
+\end{equation*}
+and, for $n=3$, by
+\begin{equation*}
+\tag{1.23''}
+\epsilon^{(rst)}X_{r_1r_2\cdots r_m,st}=a^{(qs)}a^{(rt)}\sum_{l=1}^{m}\epsilon_{r_lst}X_{r_1\cdots r_{l-1}qr_{l+1}\cdots r_m}.
+\end{equation*}
+If the expression for the Riemann metric can be reduced to the form $\displaystyle\sum_{i=1}^ndx_i^2,$ Riemman's covariant system is identically zero; and in this case the formulas (1.23) tell us that:
+
+\emph{``For a system $X_{r_1r_2\cdots r_m,r_{m+1}}$ to be first derived system of some other system of order $m$, it is necessary and sufficient that the elements $X_{r_1r_2\cdots r_m,r_{m+1}r_{m+2}}$ and $X_{r_1r_2\cdots r_m,r_{m+2}r_{m+1}}$ are identical.''}
+
+\section{Invariant nature of equations}
+The equations (1.6), which define the law of transformation for covariant systems, tell us that an arbitrary covariant system is, or isn't, identically zero, independent of our choice of the variables $x_1,x_2,\cdots,x_n$. --- It is this property that is referred to, when we say a system of equations such as
+\begin{equation}
+X_{r_1r_2\cdots r_m}=0,
+\end{equation}
+is invariant or absolute. --- We can say the same things about systems of equations of the form
+$$X^{(r_1r_2\cdots r_m)}=0,$$
+but there is no reason to consider them apart, since we can go back to the form (1.24), by transforming the system $X^{(r_1r_2\cdots r_m)}$ to its reciprocal. --- Indeed, (formulas (1.8) and (1.9)) two reciprocal systems are, or are not, identically zero together. 
+
+Once we encounter a certain problem \emph{ex novo}, it suffices to expresses its elements in generalized variables, and to substitute covariant differentiation (with respect to a Riemannian metric almost always given by the nature of the question) for ordinary differentiation, so that the equations of the problem present themselves without any effort in an invariant form. --- As we shall see, in many applications, it is this path which we must follow, when it comes to general theories, and when we are trying conducting a systematic exposition of these theories.
+
+But very often, once we are in possession of the equations ($\epsilon$) of the problem expressed in some variables $y$, we want to transform to generalized variables without repeating the processes that we used to derive the equations in terms of ($\epsilon$). --- It suffices in these cases to determine in generalized variables a covariant or contravariant system $X$, whose elements expressed in $y$ variable coincide, up to a factor, with the first terms of the equations $(\epsilon)$. --- It is evident that, supposing the second terms of the equations $(\epsilon)$ are null, we will have their transforms in generalized coordinates by setting the elements of the system $X$ to zero.
+
+Certainly this method will not be successful in all cases, but it is often a quick and easy way. This is what happens particularly, as we shall see, for the equations of mathematical physics; insomuch as we are almost stunned that, to attain the same goal, we previously employed such difficult and circuitous methods. 
+\chapter{Intrinsic geometry}
+\section{Generalities on an orthogonal system of congruences}
+In this chapter, we will use the language of geometry by considering the Riemannian metric $\varphi$ as the $ds^2$ of a manifold $V_n$ in $n$ dimensions.
+
+This being said, let us consider a system of equations such as
+\begin{equation}
+\frac{dx_1}{\lambda^{(1)}}=\frac{dx_2}{\lambda^{(2)}}=\cdots=\frac{dx_n}{\lambda^{(n)}}
+\end{equation}
+where $\lambda^{(1)},\lambda^{(2)},\cdots,\lambda^{(n)}$ are arbitrarily given functions of some variables\\ $x_1,x_2,\cdots,x_n$, but regular and not all zero in some field $C$.
+
+These equations define in the manifold $V_n$ a congruence of lines regular in $C$, and it is in this field that we shall confine our considerations. 
+
+If we regard $\lambda^{(r)}$ as contravariant, and we recall that a system of differentials of these variables is also, we recognize the invariant nature of the equations (2.1).	--- Since these equations do not change if we multiply the $\lambda$ by the same factor, we suppose that this factor is predetermined so that we have
+\begin{equation}
+a_{rs}\lambda^{(r)}\lambda^{(s)}=\lambda^{(r)}\lambda_r=1\footnote{In the real field, it is always possible to satisfy this equation since the Riemann metric is positive.}
+\end{equation}
+
+We therefore say that the system $\lambda^{(r)}$ is the \emph{contravariant coordinate system} of the congruence represented by the equations (2.1); and that its reciprocal $\lambda_r$ is the \emph{covariant coordinate system}. 
+
+Let us denote by $ds$ the element of arc length of an arbitrary line of the congruence; that is to say the positive value of $\sqrt{\varphi}$; and it can be seen from (2.1) and (2.2) that $ds$ is the absolute value of the ratios (2.1). We thus have in the general case
+\begin{equation*}
+\tag{2.1'}
+\pm\frac{dx_r}{ds}=\lambda^{(r)}; (r=1,2,\cdots,n)
+\end{equation*}
+and if we take the positive sign, we can determine for each point in $V_n$ a direction, which we shall call the \emph{positive direction}, of the line of the congruence, that passes through this point. 
+
+We recognize easily that, if the manifold $V_n$ is Euclidean, and the variables $x_1,x_2,\cdots,x_n$ are orthogonal Cartesian coordinates, the $\lambda^{(r)}$ (which coincide with the $\lambda_r$) are nothing other than the direction cosines of the lines of the congruence. 
+
+By this definition, which Beltrami gave for the angle $\alpha$, between two directions $dx_r$ and $\delta x_r$ from the same point $P$ of $V_n$, we get
+$$\cos(\alpha)=\frac{a_{rs}dx_r\delta x_r}{\sqrt{a_{rs}dx_rdx_s}\sqrt{a_{rs}\delta x_r\delta x_s}}$$
+
+If we have two congruences defined by contravariant vector fields $\lambda^{(r)}$ and $\mu^{(r)}$, and we designate $\alpha$ as the angle between the lines of the congruences leaving $P$, we have by this formula and (2.1'),
+\begin{equation}
+\cos(\alpha)=\lambda^{(r)}\mu_r,
+\end{equation}
+(or just as well, $\mu^{(r)}\lambda_r$, $a_{rs}\lambda^{(r)}\mu^{(s)}$, or $a^{(rs)}\lambda_r\mu_s$).
+
+The condition for orthogonality of congruences is thus represented by the equation
+\begin{equation*}
+\tag{2.3'}
+\lambda^{(r)}\mu_r=0
+\end{equation*}
+
+Let us denote by $\lambda_{h/r} (h=1,2,\cdots,n)$\footnote{This notation, where we separate the two indices with a slash, is done to warn us that it refers to $n$ systems of the first order; and not a system of the second order; and that the first index represents different systems when it takes different values; while the second represents elements of the same system.} the covariant vector fields of $n$ congruences and suppose that their lines are pairwise orthogonal. Letting $\eta_{hh}$ be one and $\eta_{hk}=0 (h\neq k)$, by equations (2.2) and (2.3'), the $\lambda_{h/r}$ will satisfy the equations
+\begin{equation}
+\lambda_h^{(r)}\lambda_{k/r}=\eta_{hk} (h,k=1,2,\cdots, n)
+\end{equation}
+which are just a generalization of those that link the direction cosines of the $n$ orthogonal lines considered pairwise in an $n$ dimensional Euclidean manifold.
+
+We shall call an $n$-uple in the manifold $V_n$ the set of all $n$ congruences that we have just considered; we designate by $[1],[2],\cdots,[n]$ the congruences of the $n$-uple, by $1,2,\cdots,n$ the congruences passing through an arbitrary point in $V_n$, and by $s_1,s_2,\cdots,s_n$ the line elements of these lines.
+
+\emph{Expression of an arbitrary covariant or contravariant system as a function of an orthogonal $n$-uple.} If we have an arbitrary covariant system $X_{r_1r_2\cdots r_m}$ and an arbitrary orthogonal $n$-uple $[1],[2],\cdots,[n]$, we can determine $n^m$ functions $c_{h_1h_2\cdots h_m}$ such that we have the indentities
+\begin{equation}
+X_{r_1r_2\cdots r_m}=c_{h_1h_2\cdots h_m}\lambda_{h_1/r_1}\lambda_{h_2/r_2}\cdots\lambda_{h_mr_m}
+\end{equation}
+These functions are well-defined, begetting the expressions
+\begin{equation*}
+\tag{2.5'}
+c_{h_1h_2\cdots h_m}=\lambda^{(r_1)}_{h_1}\lambda^{(r_2)}_{h_2}\cdots \lambda^{(r_m)}_{h_m}X_{r_1r_2\cdots r_m},
+\end{equation*}
+which tell us that they are invariant. In going from formulas (2.5) or (2.5') to their reciprocals, we can easily extend them to contravariant systems. 
+
+In particular, if it refers to a system $a_{rs}$ or $a^{(rs)}$, we have, by equations (4), for every orthogonal $n$-uple $[1],[2],\cdots,[n]$ the identities
+\begin{equation*}
+\tag{2.4'}
+a_{rs}=\lambda_{h/r}\lambda_{h/s},
+\end{equation*}
+\begin{equation*}
+\tag{2.4''}
+a^{(rs)}=\lambda^{(r)}_h\lambda^{(s)}_h.
+\end{equation*}
+
+The determinants $\left\|\lambda_{h/r}\right\|$ and $\left\|\lambda^{(r)}_h\right\|$, which, by (2.4), are the discriminants of two reciprocal Riemannian metrics, are therefore equal to $\sqrt{a}$ and $\frac{1}{\sqrt{a}}$ respectively\footnote{The equations (2.4) also tell us that the Riemannian metric of a manifold $V_n$ is determined, if we know the covariant vector field of an arbitrary orthogonal $n$-uple in $V_n$}.
+
+Returning to equations (2.5) and (2.5'), we can deduce that any system of equations
+$$X_{r_1r_2\cdots r_m}=0$$
+can be replaced by a system
+$$c_{h_1h_2\cdots h_m}=0;$$
+that is to say that any absolute system of equations can be transformed such that its first members are invariant. We often resort to this transformation. 
+
+Let us notice again that, being as 
+$$\frac{\partial x_r}{\partial s_h}=\lambda^{(r)}_h,$$
+and denoting by $f$ an arbitrary function of $x_1,x_2,\cdots,x_n$, we have
+\begin{equation}
+\lambda^{(r)}_hf_r\equiv \frac{\partial f}{\partial s_h}. (h=1,2,\cdots,n)
+\end{equation}
+\emph{First-order properties of the metric.} --- The metric properties of the lines $1,2,\cdots,n,$ which are related to that which we ordinarily call the curvature, are functions of the derivatives of the $\lambda_{h/r}$. --- These derivatives are linearly independent; on the contrary they must satisfy $\frac{n^2(n+1)}{2}$ equations, that we obtain by differentiating the equations (2.4).
+
+Consider
+\begin{equation}
+\gamma_{hkl}=\lambda_k^{(r)}\lambda_l^{(s)}\lambda_{h/r,s}, (h,k,l=1,2,\cdots,n)
+\end{equation}
+and differentiate these equations using the rule for differentiation of a product of systems (1.22') --- We find first that
+\begin{equation}
+\lambda_k^{(r)}\lambda_{h/r,s}+\lambda^{(r)}_h\lambda_{k/r,s}=0 (h,k,l=1,2,\cdots,n)
+\end{equation}
+and we can easily see that we can replace them with:
+\begin{equation*}
+\tag{2.8'}
+\gamma_{hkl}+\gamma_{khl}=0 (h,k,l=1,2,\cdots,n)
+\end{equation*}
+which comprises the particular case\footnote{No Einstein summation}
+\begin{equation*}
+\tag{$2.8_1$}
+\gamma_{hhl}=0
+\end{equation*}
+
+The number of invariants $\gamma_{hkl}$ that are mutually independent is therefore equal to $\frac{n^2(n^2-1)}{2}$, and since the number is equal to the difference between $n^3$ and $\frac{n^2(n+1)}{2}$, in which the first is the number of derivatives of $\lambda_{h/r}$ and the second is that of the constraints that link the derivatives, we can express the $\lambda_{h/r,s}$ as functions of $\lambda_{h/r}$ and the invariants $\gamma$. By solving the equations (2.7) we obtain these expressions in the form
+\begin{equation*}
+\tag{2.7'}
+\lambda_{h/r,s}=\gamma_{hij}\lambda_{i/r}\lambda_{j/s}
+\end{equation*}
+It will suffice then, when studying the metric properties of the lines $1,2,\cdots,n,$ to fix our attention on the invariants $\gamma_{hij}$; and in fact they are linked to the metric properties by quite straightforward and simple relations. Without stopping here to examine in detail the geometric of kinematic significance of each of the $\gamma$, it will suffice for us that it is necessary for the applications that will follow. --- We can also add that, because of their kinematic significance, we call the invariants $\gamma$ \emph{coefficients of rotation} of the $n$-uple $[1],[2],\cdots,[n]$.
+\section{Intrinsic derivatives and their relations}
+Before proceeding, we must first establish relations that link any two derivatives such as $\displaystyle\frac{\partial}{\partial s_k}\frac{\partial f}{\partial s_h}$ and $\displaystyle\frac{\partial}{\partial s_h}\frac{\partial f}{\partial s_k}$, since we cannot invert the operations represented by the symbols $\displaystyle\frac{\partial}{\partial s_h}$ and $\displaystyle\frac{\partial}{\partial s_k}$. In fact, if we differentiate the identity (2.6), we get 
+$$\frac{\partial}{\partial x_s}\frac{\partial f}{\partial s_h}=\lambda_h^{(r)}f_{rs}+f^{(r)}\lambda_{h/r,s},$$
+and also
+$$\frac{\partial}{\partial s_k}\frac{f}{s_h}=\lambda^{(s)}_k\frac{\partial}{\partial x_s}\frac{\partial f}{\partial s_h}=\lambda^{(r)}_h\lambda^{(s)}_kf_{rs}+f^{(r)}\lambda_k^{(s)}\lambda_{h/r,s},$$
+or again, noting the indentites
+$$\lambda^{(s)}_k\lambda_{h/r,s}=\gamma_{hik}\lambda_{i/r},$$
+$$f^{(r)}\lambda_k^{(s)}\lambda_{h/r,s}=\gamma_{hik}\frac{\partial f}{\partial s_i},$$
+which are the derivatives of (2.4), (2.6), and (2.7'),
+$$\frac{\partial}{\partial s_k}\frac{\partial f}{s_h}=\lambda^{(r)}_h\lambda_k^{(s)}f_{rs}+\gamma_{hik}\frac{\partial f}{\partial s_i}.$$
+Finally we deduce from these last relations that
+\begin{equation}
+\frac{\partial}{\partial s_k}\frac{\partial f}{\partial s_h}-\frac{\partial}{\partial s_h}\frac{\partial f}{\partial s_k}=(\gamma_{ikh}-\gamma_{ihk})\frac{\partial f}{\partial s_i}
+\end{equation}
+\section{Normal and geodesic congruences}
+\emph{Normal congruences.} --- We say that a congruence of lines in $V_n$ is \emph{normal} if it results from trajectories orthogonal to a family of surfaces in $V_n$ $f(x_1,x_2,\cdots,x_n)=$const. Let us choose in some orthogonal $n$-uple a congruence $[n]$; we shall determine the necessary and sufficient conditions such that this congruence is normal. 
+
+Evidently for this, it is necessary and sufficient that any direction $\delta x_r$ normal to the line $n$ belong to the surface $f=0$, that is to say that we have
+$$\frac{\partial f}{\partial x_r}\delta x_r=0.$$
+In other terms, the conditions, are the same, that are necessary and sufficient to ensure the equations
+$$X_h(f)=\lambda_h^{(r)}f_r=0 (h=1,2,\cdots,n-1)$$
+are satisfied by a function $f$; that is to say that the system of these equations is complete. We will then define (for $h,k=1,2,\cdots,n-1$)
+$$(X_hX_k)f=X_hX_k(f)-X_kX_h(f)$$
+which are linear functions of the $X_h(f)$.
+
+We have:
+$$X_hX_k(f)=\lambda_h^{(r)}(\lambda_k^{(s)}f_{sr}+f^{(s)}\lambda_{k/r,s},$$
+or, by equations (2.8) and (2.7')\footnote{No Einstein summation in the second},
+$$\lambda_h^{(r)}\lambda_{k/s,r}=-\gamma_{ikh}\lambda_{i/s},$$
+%FIX n-uple to moving moving frame!!
+$$X_hX_k(f)=\sum_{r,s=1}^n\lambda_h^{(r)}\lambda_k^{(s)}f_{sr}-\sum_{i=1}^{n-1}(\gamma_{ihk}-\gamma_{ikh})X_i(f)-\frac{\partial f}{\partial s_n};$$
+and from this\footnote{No Einstein summation here.}
+$$X_hX_k(f)-X_kX_h(f)=\sum_{i=1}^{n-1}(\gamma_{ihk}-\gamma_{ikh})X_i{f}+(\gamma_{nhk}-\gamma_{nkh})\frac{\partial f}{\partial s_n}.$$
+
+The expression $\displaystyle\frac{\partial f}{\partial s_n}$ being independent of the
+$$X_h(f) (h=1,2,\cdots,n-1),$$
+the identity, which we have just established, tells us that
+
+\emph{The necessary and sufficient conditions for the congruence $[n]$ is normal are expressed by the $\frac{(n-1)(n-2)}{2}$ equations}
+\begin{equation}
+\gamma_{nhk}=\gamma_{nkh} (h,k=1,2,\cdots,n-1)
+\end{equation}
+We also have:
+
+``If all the congruences of an orthogonal moving frame are normal, all the $\gamma_{hkl}$ with three distinct indices are null, and conversely.''
+
+Since we have nothing prescribed about the choice of the congruences \\$[1],[2],\cdots,[n-1]$, which form with $[n]$ an orthogonal moving frame, the equations (2.9), recognizing their geometric significance, have an invariant character, with respect to not only any possible coordinate change, but also all possible changes of the $n-1$ congruences $[1],[2],\cdots,[n-1]$ that form with $[n]$ an orthogonal moving frame. 
+
+The conditions (2.10) being satisfied, the $\lambda_{n/r}$ will be proportional to the derivatives $f_r$ of a function, that is to say, that we can determine a coefficient $\mu$ such that
+$$f_r=\mu\lambda_{n/r}$$
+that satisfies the equations
+$$f_{rs}=f_{sr}$$
+
+Because of the the formulas (2.7),
+\begin{equation}
+f_{rs}=\mu_s\lambda_{n/r}+\mu\gamma_{nij}\lambda_{i/r}\lambda_{j/s},
+\end{equation}
+and setting
+\begin{equation}
+\psi=\log\mu
+\end{equation}
+the indeterminate function $\psi$ must then satisfy the equations
+$$\psi_s=\lambda_{n/r}+\gamma_{nij}\lambda_{i/r}\lambda_{j/s}=\psi_r\lambda_{n/s}+\gamma_{nij}\lambda_{i/s}\lambda_{j/r}$$
+By multiplying these equations by $\lambda_n^{(s)}$ (for each $s=1,2,\cdots,n$) and adding them, by (2.4) and (2.9), we can substitute the the equivalent system\footnote{Einstein summation is not used.}
+\begin{equation}
+\psi_r=\nu\lambda_{n/r}+\sum_{i=1}^{n-1}\gamma_{nin}\lambda_{i/r},
+\end{equation}
+$\nu$ begin indeterminate. 
+
+\emph{Isothermal families of surfaces.} We say that a family of surfaces\\
+$f(x_1,x_2,\cdots,x_n)=$const. is isothermal in a manifold $V_n$ and that $f$ is an isothermal parameter if this function satisfies the equation\footnote{We shall later see that this is satisfied if the function under consideration is harmonic.}
+\begin{equation}
+a^{(rs)}f_{rs}=0.
+\end{equation}
+We can consider a family of surfaces to be determined, once we know the congruence of its orthogonal trajectories; in other words, that any family of surfaces can be represented as a system $\lambda_{n/r}$ satisfying both the algebraic equation (2.2) and the first-order partial differential equation (2.10). --- Let us proceed to establish the necessary and sufficient conditions so that this family is isothermal, and to determine, these conditions being filled, the isothermal parameters. 
+
+By substituting the expressions $f_{rs}$ given by (2.11) into (2.14), we can replace it with the equivalent formula
+$$\frac{\partial psi}{\partial s_n}=-\gamma_{nii},$$
+which gives us the indeterminate $\nu$ of the formula (2.13)
+\begin{equation}
+\nu=-\sum_{i=1}^{n-1}\gamma_{nii}
+\end{equation}
+For the surface having the $n$ lines as orthogonal trajectories to be isothermal, it is necessary and sufficient that, by replacing $\nu$ by its expression (2.15), the members of the right hand side of (2.13) result from the derivatives of a function $\psi$ taken with respect $x_r$; by which the
+$$f_r=Ce^\psi\lambda_{n/r}$$
+will also be the derivatives of a function $f$ with respect to the same variables, and
+$$f=C\int e^\psi\lambda_{n/r}dx_r+c,$$
+(C and c being arbitrary constants) will be the most general expression for isothermal parameters of the considered family. 
+
+We then recognize easily that the conditions for integrability of the formulas (2.13) are represented by the equations\footnote{No Einstein summation.}
+\begin{equation}
+\begin{cases}
+	&\displaystyle\frac{\partial\nu}{\partial s_h}+\frac{\partial\gamma_{hnn}}{s_n}+\nu\gamma_{hnn}+\sum_{i=1}^{n-1}\gamma_{inn}(\gamma_{ihn}-\gamma_{inh})=0\text{}\\
+	&\displaystyle\frac{\partial\gamma_{hnn}}{\partial s_k}+\sum_{i=1}^{n-1}\gamma_{inn}\gamma_{ihk}=\frac{\partial\gamma_{knn}}{\partial s_h}+\sum_{i=1}^{n-1}\gamma_{inn}\gamma_{ikh}\text{}
+\end{cases}\\
+\end{equation}
+$$(h,k=1,2,\cdots,n-1).$$
+If the congruences $[1],[2],\cdots,[n]$ are all normal, that is to say, if they are the intersections of $n$ orthogonal surfaces in $V_n$, these equations reduce to the simpler form\footnote{Again without Einstein summation.}
+\begin{equation*}
+\tag{2.16'}
+\begin{cases}
+	&\displaystyle\frac{\partial\nu}{\partial s_h}+\frac{\partial\gamma_{hnn}}{\partial s_n}+\nu\gamma_{hnn}=0,\\
+	&\displaystyle\frac{\partial\gamma_{hnn}}{s_k}=\frac{\partial\gamma_{knn}}{\partial s_h}
+\end{cases}
+\end{equation*}
+%Replace with ``metric tensor'' where necessary.
+\emph{Geodesic congruences.}\footnote{See \emph{Ricci} ``Dei sistemi di congruenze ortogonali etc.'' $\S$5 and also ``Lezioni sulla teoria delle superficie'', first part, chapter IV.} --- In saying that a line is a geodesic in a manifold $V_n$, where the $ds^2$ is given by the metric tensor $\varphi$, we mean that the first variation of the integral
+$$\int ds=\int\sqrt{a_{rs}dx_rdx_s}$$ 
+calculated along this line is zero. The conditions for all the lines $n$ to be geodesic (then we shall say that the congruence $[n]$ is geodesic) are expressed by the equations\footnote{No Einstein summation.}
+\begin{equation}
+\gamma_{inn}=0, (i=1,2,\cdots,n-1)
+\end{equation}
+which possess the same invariant character, which we noted in (2.10). In particular, if the space is Euclidean, (2.16) gives us the intrinsic characteristics of rectilinear congruences. 
+
+\emph{Geodesic curvature of a congruence.} --- If the congruence $[n]$ is not geodesic, and we consider the manifold $V_n$ as contained in a Euclidean space $S_{n+m}$, we can represent the geodesic curvature of the line $[n]$ at an arbitrary point $P$ in $V_n$ in the following manner. --- The length of the vector we shall consider is\footnote{No Einstein summation.}
+$$\gamma^2=\sum_{i=1}^{n-1}\gamma^2_{inn},$$
+and its direction is\footnote{GUESS} 
+$$\mu_r=\sum_{i=1}^{n-1}\gamma_{inn}\lambda_{i/r}.$$
+This vector has the following properties:
+\begin{enumerate}
+	\item It vanishes identically, if the congruence $[n]$ is geodesic. 
+	\item Its projection onto the plane tangent to the lines $[i]$ and $[n]$ is equal to the curvature of the projection of the line $[n]$ on the same plane.
+	\item It is normal to the line $[n]$.
+\end{enumerate}
+
+Because of these properties, we call this vector the \emph{geodesic curvature} and the lines of the congruence generated by a covariant vector field $\mu_r$ \emph{lines of geodesic curvature} of the congruence $[n]$.
+
+\emph{Canonical systems relative to a given congruence.} A congruence $[n]$ being given, there are infinitely many ways we can associate $n-1$ congruences that constitute an orthogonal moving frame in $V_n$. Of these systems of $n-1$ mutually orthogonal congruences (that are also orthogonal to $[n]$), there are one or more, which we shall define as canonical with repect to the congruence $[n]$. 
+
+Take
+$$2X_{rs}=\lambda_{n/r,s}+\lambda_{n/s,r},$$
+and consider the system of algebraic equations
+\begin{equation}
+\begin{cases}
+	&\lambda_{n/r}\lambda^{(r)}=0\text{}\\
+	&\lambda_n\mu+(X_{qr}+\omega a_{qr})\lambda^{(r)}=0 \text{$q=(1,2,\cdots,n)$}
+\end{cases}
+\end{equation}
+$\mu,\omega,\lambda^{(1)},\lambda^{(2)},\cdots,\lambda^{(n)}$ being inderterminate. These are a system of $n+1$ equations that are linear and homogeneous relative to the unknowns\\ $\mu,\lambda^{(1)},\lambda^{(2)},\cdots,\lambda^{(n)}$ and its determinant set to zero gives us an equation of the $(n-1)^{st}$ degree in $\omega$
+\begin{equation}
+\Delta(\omega)=0
+\end{equation}
+whose roots are all real. --- Denote these roots by $\omega_h$ $(h=1,2,\cdots,n-1)$ at suppose first that these roots are all simple. If we use $\omega=\omega_h$ in (2.17), and bring in (2.2), the unknowns $\lambda^{(1)},\lambda^{(2)},\cdots,\lambda^{(n)}$ are determined up to a sign. --- Their values, which we designate by $\lambda_h^{(r)}$ $(r=1,2,\cdots,n)$, are the elements of a covariant tensor field of a congruence $[h]$; the $n-1$ congruences $[1],[2],\cdots,[n-1]$ being mutually orthogonal and orthogonal to $[n]$ are the elements of an orthogonal system that is canonical with respect to $[n]$. In this case, the system is completely determined. 
+
+If the roots of the equation (2.18) are all equal to each other, all systems of $n-1$ congruences that form with $[n]$ an orthogonal moving frame and satisfy equations (2.17) can be regarded as canonical with respect to $[n]$. 
+
+%fix the next paragraph%
+In general, if the distinct roots of the equation (2.18) are $\omega_1,\omega_2,\cdots,\omega_m$ and they possess multiplicity $p_1,p_2,\cdots,p_n$, we can put them into the equation (2.17) $\omega=\omega_h$ $(h=1,2,\cdots,m)$. We can determine $p_h$ congruences that are pairwise orthogonal and such that the elements of their contravariant tensors are solutions to the equations (2.17). In the group $\Lambda_h$ of these completely arbitrary congruences that belong to an orthogonal substitution of order $p_h$, that is to say, $\displaystyle\frac{p_h\cdot(p_h-1)}{2}$ arbitrary functions. As the congruences that are part of two groups $\Lambda_h$ and $\Lambda_k$ are pairwise orthogonal, we have
+$$p_1+p_2+\cdots+p_m=n-1$$
+congruences that constitute with $[n]$ an orthogonal moving frame. --- In this case, the congruences $[1],[2],\cdots,[n-1]$ are also the elements of an orthogonal canonical system with respect to the congruence $[n]$, but this system is neither determined nor arbitrary. It contains
+$$\sum_{h=1}^m=\frac{p_h(p_h-1)}{2}$$
+
+The coefficients of a rotation of an orthogonal moving frame when\\ $[1],[2],\cdots,[n-1]$ are the elements of a canonical system with respect to $[n]$, are linked by their characteristic relations
+\begin{equation}
+\gamma_{nhk}+\gamma_{nkh}=0
+\end{equation}
+By this and equation (2.10), we can deduce that, if the congruence $[n]$ is normal, the $\gamma_{nhk}$ are zero (for $h\neq k$) in the orthogonal canonical system relative to $[n]$. For the congruences belonging to the system, we get a very simple geometric simplification: they result in the lines of curvature orthogonal to the lines $n$.\footnote{Many geometers have studied the curvature of spaces in higher dimensions. --- Here it will suffice to recall \emph{Lipschitz} ``Entwickelungen einiger Eigenschaften der quadratischen Formen von $n$ Differentialen,'' Crelle's Journal, Vol. LXXI, 1870.}
+
+We can give a simple geometric interpretation for an orthogonal canonical system with an arbitrary congruence, when the space is Euclidean and three-dimensional.\footnote{Cfr. \emph{Levi-Civita} ``Sulle congruenze di curve,'' Rendiconti dell' Accademia dei Lincei, 5 March 1891.} We can even extend this interpretation to an arbitrary manifold $V_n$; but we cannot for all these details and it is better to move on to other considerations.
+
+\section{Properties of the rotational coefficients}
+
+We saw in $\S2$ that we have $\frac{n^2(n^2-1)}{2}$ algebraically independent rotational coefficients for an arbitrary moving frame. These coefficients are not all independent; in fact they must satisfy some first-order differential equations that we easily obtain from differentiating the equations (2.7) and eliminating the derivatives of $\lambda_{h/r}$ with the help of these equations and (1.23). 
+
+By taking
+\begin{equation}
+\gamma_{hi;kl}=\frac{\partial \gamma_{hik}}{\partial s_l}-\frac{\partial \gamma_{hil}}{\partial s_k}+{\gamma_{hij}(\gamma_{jkl}-\gamma_{jlk})+\gamma_{jhl}\gamma_{jik}-\gamma_{jhk}\gamma_{jil}},
+\end{equation}
+we arrive at the equations
+\begin{equation}
+\gamma_{hi;kl}=\lambda_h^{(g)}\lambda_i^{(r)}\lambda_k^{(s)}\lambda_l^{(t)}a_{qr;st},
+\end{equation}
+which with equations (2.8') gives us the necessary and sufficient conditions so that the $n^3$ given functions $\gamma_{hki}$ can be the coefficients of rotation of an orthogonal reference frame in the manifold $V_n$. 
+
+For $n=2$, we have only one formula (2.22), which can be reduced to the following form:
+\begin{equation*}
+\tag{$2.22_1$}
+\frac{\partial \gamma_{121}}{\partial s_2}+\frac{\partial \gamma_{212}}{\partial s_1}=\gamma^2_{121}+\gamma^2_{212}+G.
+\end{equation*}
+This is a well-known formula from the theory of surfaces, since $\gamma_{121}$ and $\gamma_{212}$ are the geodesic curvatures of lines 1 and 2.
+
+For $n=3$, by defining
+\begin{equation}
+\gamma_{hk}=\gamma_{h+1h+2;k+1k+2}
+\end{equation}
+the equations (2.22) can be replaced by
+\begin{equation*}
+\tag{$22_2$}
+\gamma_{hk}=\lambda_h^{(r)}\lambda_k^{(s)}a_rs,
+\end{equation*}
+which gives us in particular
+$$\gamma_{hk}=\gamma_{kh}$$
+
+In general, the equations (2.22) being related to a covariant system in Riemannian space are also intimately realated to the metric of the manifold $V_n$. 
+
+These equations are nothing but generalizations of those that link the components $p,q,r$ of the moving trihedral. \footnote{\emph{Darboux.} ``Le\c{c}ons sur la th\'{e}orie des surfaces,'' Chapter 5, and also \emph{K\"{o}nigs} ``Le\c{c}ons de Cin\'{e}matique,'' Chapter 10} Supposing the manifold $V_n$ coincides with Euclidean 3-space, the tangents to the lines $1,2,3$ determine at each point of this space a rectangular moving trihedral. --- The invariants $\gamma_{ihk}$ that are independent from each other therefore give us the rotations $p_i,q_i,r_i$ $(r=1,2,3)$ which correspond to infintesimal displacements along the lines $1,2,3$. The formulas, which in this case come from (2.22), are even more general than those that depend on the congruences $[1],[2],[3]$ being normal.\footnote{\emph{Levi-Civita} ``Tipli di potenziali, che si possono far dipendre de une sole coordinate,'' Proceedings from the Accademia delle Scienze di Torino, Vol. XLIX, 1899 $\S5$}
+
+We can see in this example how the methods of the absolute differential calculus, because they hold in general, summarize and offer all the advantages of, previously known different procedures.
+\section{Canonical expressions of systems}
+In our studies of geometry, physics, analytical mecanics, etc. we are almost always driven to systems which are invariant (see $\S7$ of the first chapter), and in which we encounter the coefficients of the Riemannian metric in a system of the first or second order, or their derivatives. To investigate these ideas, we confine ourselves to the case of a single associated system. 
+
+Suppose first that this is a first-order system $X_r$. We put it in correspondence with a congruence $[n]$ defined by the equations
+$$\frac{dx_1}{X^{(1)}}=\frac{dx_2}{X^{(2)}}=\cdots=\frac{dx_n}{X^{(n)}},$$
+and whose covariant vector field results from the elemtents
+$$\lambda_{n/r}=\frac{X_r}{\varrho},$$
+where
+$$\varrho^2=X^{(r)}X_r$$.
+We therfore say that the formulas
+\begin{equation}
+X_r=\varrho\lambda_{n/r},
+\end{equation}
+give us the canonical expressions of $X_r$. 
+
+Starting from these canonical expressions, we proceed in the following manner. 
+
+We start by associating $n-1$ congruences that form an orthogonal moving frame with $[n]$ (and in this case, it will be useful to resort to a system, or one of the systems, that is canonical with respect to $[n]$). After this we will transform the equations in which the problem is stated by substituing for $a_{rs}$ and $X_r$ the expressions given by (2.4') and (2.23), respectively, and for their derivatives elements of the derived system obtained by covariant differentiation with respect to the Riemann metric. 
+
+We obtain in this manner a system of equations closely related to the essential elements of the problem, whose geometric interpretation, almost always easy and natural, characterizes it in a clear manner. --- This system will often also give us hints about its integration, by rendering it almost intuitive the independent variables that we must select to obtain, if possible, the integrated equations. --- In this case we return to our orginal variables, and we obtain the canonical solutions of the problem. 
+
+These methods, we should first realize, do not eliminate the essential difficulties of the questions to which they have been applied. On the contrary, they drive us to transformations that leave intact each of these difficulties. --- They teach us only how to avoid accidental obstacles; and by this fact alone, in going from a complicated system, we arrive at a simple canonical system that can be easily dealt with. 
+
+If it refers to a second-order symmetric system $a_rs$, we can use the equations\footnote{\emph{Ricci} ``Sulla teoria delle linee geodetiche e dei sistemi isotermi di Liouville,'' $\S2$ Atti del R. Istituto Veneto di Scienze, Lettere ed Arti, 1894 and also \emph{Levi-Civita} ``Sulla transformazione delle equazioni dinamiche,'' $/S7$, Annals of Mathematics, 1896.}
+\begin{equation}
+(a_{rs}-\varrho	a_{rs})\lambda^{(s)}=0. (r=1,2,\cdots,n)
+\end{equation}
+By eliminating $\lambda^{(1)},\lambda^{(2)},\cdots,\lambda^{(n)}$ we arrive at an $n^{th}$ degree equation in $\varrho$ whose properties are well known. All the roots $\varrho_1,\varrho_2,\cdots,\varrho_n$ are real and substituting them for $\varrho$ in equations (2.24) brings us in all cases to the determination of one or more orhogonal moving frames $[1],[2],\cdots,[n]$ such that for the elements of the given system we have the canonical expressions. 
+$$a_{rs}=\varrho_h\lambda_{h/r}\lambda_{h/s}.$$
+
+In going from these equations we transform the equations of the problem and often arrive a its canonical solutions in a manner analogous to that which we have indicated for the case of first-order systems. 
+
+Henceforth, we shall see the general rules, which we can deduce for a system of arbitrary order from the examples that we have considered.
+
+We have seen ($\S1$) that the elements of a covariant system of arbitrary order $m$ can be expressed as homogeneous functions of degree $m$ of the elements of covariant tensor field of an arbitrary moving frame, which we shall henceforth call \emph{moving reference frames.} To obtain the canonical expressions for elements of a first-order system $X_r$, in the first example we chose the moving frame in a manner such that in the general formulas
+$$X_r=c_h\lambda_{h/r},$$
+we had
+$$c_1=c_2=c_3=\cdots=c_{n-1}=0$$
+In the same way, we reduced the $a_{rs}$ to their canonical expressions in chosing a moving reference frame in a manner such that for the formulas
+$$a_{rs}=c_{hk}\lambda_{h/r}\lambda_{ks}$$
+we had
+$$c_{hk}=0. (h\neq k)$$
+
+In general, if we are dealing with an $m^{th}$ order covariant system, it is important above all to reduce the elements to well-chosen canonical expressions in taking the moving reference frame in the most convenient manner. After this, to establish the intrinsic equations of the problem, we only have to follow some simple and uniform procedures.
+
+\chapter{Applications to Analysis}
+\section{Classification of quadratic forms of differentials}
+Let $\varphi$ be a positive quadratic form\footnote{Cfr. \emph{Ricci} ``Principi di una teoria delle forme differenziali quadratiche'' Annals of Mathematics, Series $II^a$, Vol. XII, 1884, or chapter 5 of ``Lezioni, etc.''} of the differentials of $n$ variables \\$x_1,x_2,\cdots,x_n$. In conveniently choosing $n+\mu$ functions \\$y_1,y_2,\cdots,ys_n,\cdots,y_{n+\mu}$ of the $x$ variables, we can always (for $\mu$ sufficiently large) satisfy the equation 
+$$\varphi=dy_1^2+dy_2^2+\cdots+dy_n^2+\cdots+dy_{n+\mu}^2.$$
+The smallest value $m$ of $\mu$ for which one such equality is possible can range from 0 to $\frac{n(n-1)}{2}$. We have a sort of fundamental criterion for the classification of the Riemannian metrics $\varphi$. The number $m$ is called the \emph{class of the metric} to which it corresponds. It cannot exceed $\frac{n(n-1)}{2}$. So, for example, binary metrics ($n=2$) are either class zero or one. 
+
+Metrics of the $0^{th}$ class (with an arbitrary number of variables) are characterized by the fact that Riemmann's system (see page 15) is indentically zero. For metrics of the first class we have the following theorem:
+
+\emph{For a first-class metric $\varphi$ it is necessary and sufficient that we can determine a sencond-order symmetric system $b_{rs}$ such that
+\begin{enumerate}
+	\item $a_{rt;s}=b_{rs}b_{tu}-b_{ru}b_{ts},$
+	\item the system $b_{rs,t}$ is symmetric\footnote{We say that a higher-order system is symmetric if its elements are invariant under permutation of the indices.}
+\end{enumerate}}
+Once these conditions are met, the functions $y_1,y_2,\cdots,y_n,y_{n+1}$ can be determined as integrals of a certain complete system. 
+
+For metric with higher classes, we can demonstrate an analogous theorem. 
+
+But we do not press this argument further; another application of the absolute differential calculus demands our attention. 
+
+\section{Absolute invariants, differential paramaters}
+The classic research of Jacobi, Lam\'e, and Beltrami, to whom we owe the introduction to analysis of invariants\footnote{See \emph{Ricci} ``Sui parametri e gli invarianti delle forme quadratiche differenziali'' Annals of Mathematics Series II$^a$, Vol. XIV, 1886, and ``Lezioni, etc.'' Chapter 5. Consult also \emph{Levi-Civita} ``Sugli invarianti assoluti,'' Atti dell' Instituto Venuto, 1894.} under the name \emph{differential parameters}, have their founding in considering the first variation of certain integrals. Despite the ingenuity and elegance of this artifice, we are driven to indirect methods that are far removed from what the nature of the problem would suggest. 
+
+In fact, it returns in the following general problem, which is after all nothing but a problem of algebraic elimination:
+
+\emph{Being given a Riemannian metric $\varphi$ and an arbitrarty number of (covariant or contravariant) associated systems $S$, determine all absolute invariants that can be formed from the coefficients of $\varphi$, the elements of the systems $S$, and their derivatives up to some given order $\mu$.}
+
+If we hadn't considered the derivatives, this question would be well-known, for which it would suffice to refer to the theory of forms. The intervention of the derivatives seems at first to complicate our research. Very fortunately, this is not the case. The absolute differential calculus always brings us back to the same question, that of substituting for the ordinary derivatives the derived systems given by differentiation with respect to $\varphi$. More precisely, we have the theorem:
+
+\emph{To determine all the absolute differential invariants of order $\mu$, it suffices to determine the algebraic invariants of the following forms:
+\begin{enumerate}
+	\item the fundamental form $\varphi$;
+	\item forms associated with $S$ and their derivatives with respect to $\varphi$, up to the order $\mu$;
+	\item (for $\mu>1$) the form whose coefficients are the elements of the Riemann curvature tensor; its derivatives up to order $\mu-2$. 
+\end{enumerate}}
+
+We say that \emph{proper invariants} are those that depend uniquely on the coefficients of $\varphi$ and their derivatives; we deduce the following two corollaries from the previous proposition:
+
+\emph{Metrics of the $0^{th}$ class have no proper differential invariants}
+
+\emph{Metrics of higher order possess no differential invariants of the first order, their invariants of order $\mu>1$ are (1) and (3) enumerated above.}
+
+These results have a much simpler form for the two- and three-dimensional cases.
+
+For $n=2$ (See chapter 1, $\S6$), the Riemman curvature tensor can be replaced by Gauss' invariant $G$, which is the only proper invariant of the second order for two-dimensional systems. 
+
+It is good to remark from here onwards that once we regard $\varphi$ as the $ds^2$ of the surface, the value of $G$ is nothing but the product of the principal radii of curvature. It is for this reason that $G$ is sometimes called the \emph{total curvature of the metric $\varphi$}. By the preceeding discussion, we can affirm that the condition $G=0$ is necessary and sufficient for a two-dimensional metric $\varphi$ be of class 0. In geometric language, this is the well-known proposition that developpable surfaces are the only ones that are applicable on a plane. 
+
+For $G=0$, our two-dimensional metric evidently has no proper invariants; in general
+
+\emph{The proper invariants of a two-dimensional metric up to an arbitrary given order $\mu>2$ are obtained by determining the absolute algebraic invariants common to the the form $\varphi$ and those that have the covariant derivatives of G up to order $\mu-2$ as coefficients.}
+
+The result in contained implicitly in a paper by Casorati\footnote{``Ricera fondamentale per lo studio di una certa classe di propriet\`a delle superfici curve,'' Annals of Mathematics, Series I$^a$, Volume III and IV, 1860-61.}.
+
+For $n=3$, we can substitute for the consideration of the Riemann curvature tensor the consideration of the second-order contravariant system $\alpha^{(rs)}$ or its reciprocal $\alpha_{rs}$, and it is clear that the conditions $\alpha_{rs}=0$ are the same time necessary and sufficient for a three-dimensional metric to be of class 0. Once a system $\alpha_{rs}$ is not identically zero, the consideration of the two quadratic forms with coefficients $\alpha_{rs}$ and $a_{rs}$ will give us the proper differential invariants of the second order. As algebraic invariants, we can take from these two forms the roots of the equation
+$$\left\|\alpha_{rs}-\varrho a_{rs}\right\|=0,$$
+which we call the \emph{fundamental invariants of the metric $\varphi$.} We are driven to this choice by reduction of the tensor $\alpha_{rs}$ to its canonical form (Chapter 2, $\S5$). It easily results in three orthogonal congruences, which are very important for the study of geometric properties, which generalize the notion of total curvature to two-dimensional manifolds. 
+
+We will return to geometric applications (Chapter 4, $\S8$); for the moment we confine ourselves to inform that we call the congruences of the triple the \emph{principal congruences} and the \emph{principal directions} are those of their tangents. 
+
+It is barely necessary to add that, to have proper invariants of a three-dimensional manifold, up to an order $\mu>2$, it suffices to take into consideration, aside from the two forms just employed, those that that are formed by covariant differentiation of the $\alpha_{rs}$ up to order $\mu-2$. 
+
+That being said of proper invariants, let us now examine a few simple examples of the general case, where we also have associated tensors. 
+
+Suppose first that we are dealing with two functions $U$ and $V$ associated with an arbitrary metric $\varphi$ of $n$ variables.
+
+The differential parameters $\Delta_1 U$ and $\Delta_1 V$ and that which Beltrami called the mixed parameter of $U,V$
+$$\nabla(U,V)=a^{(rs)}U_rV_s)$$
+exhaust the system of first-order differential invariants. 
+
+Once we are dealing with a single associated function $U$, for the first order, we obviously have nothing but $\Delta_1 U$; for the second order, we must consider the absolute invariants of three algebraic forms, including $\phi=U_rdx_r$, $\psi=U_{r,s}dx_rdx_s.$ In particular, the invariants of the couple $\phi$, $\psi$ will be of degree $1,2,\cdots,n$ with respect to the second derivatives of $U$. 
+
+The first-degree invariant $a^{(rs)}U_{rs}$ is nothing but the well-known $\Delta_2 U$ of Beltrami. 
+
+Let there now be a first-order tensor $X_r$ associated with our metric $\varphi$. It gives rise to invariants of the 	first order, which belong to the algebraic system of three forms, that is to say, $phi$, the linear form $X_rdx_r$, and the \emph{bilinear} form whose coefficients are the elements of the first derivative of $X_r$ taken with respect to $\varphi$. Of these invariants, we point out
+$$\Theta=a^{(rs)}X_{rs},$$
+which occurs frequently in applications. We also remark that easy operations conduct us to an expression for $\Theta$, viz.
+$$\Theta=\frac{1}{\sqrt{a}}\frac{\partial}{\partial x_r}(\sqrt{a}X^{(r)}),$$
+which is more convenient for calculations, while the preceding expression lends itself to theoretical work. In the case of only two variables, we can substitute the quadratic form with coefficients $X_{rs}+X_{sr}$ for the bilinear form, provided that we add the invariant that is obtained by composing the system $X_{rs}$ with the contravariant system $E$ (Chapter 1, $\S3$). Its expression is then
+$$\epsilon^{(rs)}X_{rs}=\frac{1}{\sqrt{a}}(X_{12}-X_{21}),$$
+or, if we want,
+$$\frac{1}{\sqrt{a}}\left(\frac{\partial X_1}{\partial x_2}-\frac{\partial X_2}{\partial x_1}\right)$$
+In an analogous manner, for $n=3$, it suffices to associate a second-order (symmetric) system $X_{rs}+X_{sr}$ with a first-order covariant system, defined by
+$$2\mu^{(r)}=\epsilon^{(rst)}X_{st}.$$
+We can find the expressions for $\mu^{(r)}$ as
+$$2\mu^{(r)}=\frac{1}{\sqrt{a}}\left(\frac{\partial X_{r+2}}{\partial x_{r+1}}-\frac{\partial X_{r+1}}{\partial x_{r+2}}\right),$$
+which are very easily calculated when needed in their particular application. 
+\chapter{Geometric Applications}
+\section{Two-dimensional manifolds (geometry on a surface)}
+The theory of surfaces and curves on surfaces, such as it was founded by Gauss, has now developped so as to constitute a vast and fertile scientific field by itself. But, even in the best expositions of this theory a unified method is lacking: it does not appear from the natural development of simple principles. The absolute differential calculus, on the other hand, can take us there without any effort, also giving the theory as simple a form as possible. 
+
+It also leads to a reasonable separation of the theory of two-dimensional manifolds, considered by themselves, from the theory of surfaces, considered based on their being embedded in Euclidean space. The first comes from consideration of the differential form that expresses the $ds^2$ of the manifold (\emph{first fundamental form}); for the second, it suffices to associate another quadratic form (\emph{second fundamental form}, after Bianchi). 
+
+We start with the first. Let a manifold $V_n$ be defined by the square of its linear element
+$$ds^2\equiv a_{rs}dx_rdx_s\equiv\varphi.$$
+Let us agree to regard this form as fundamental. If the Gaussian curvature is zero, we already know that the manifold will be linear. If this $G$ is not zero, the association of $G$ with $\varphi$ gives all the proper invariants of the form, that is to say, all the expressions linked to intrinsic properties of the manifold $V_n$. 
+
+Let $\lambda_{1/r},\lambda_{2/r}$ be the covariant coordinates of two arbitrary orthogonal congruences of curves in our manifold (congruences $[1],[2]$). Recall, for $n=2$, the general positions of Chapter 2. Setting
+\begin{equation}
+\varphi_s=\gamma_{21j}\lambda_{j/s},
+\end{equation}
+they become
+\begin{equation}
+\lambda_{1/r,s}=-\lambda_{2/r}\varphi_s, \lambda_{2/r,s}=\lambda_{1/r}\varphi_s.
+\end{equation}
+Of the coefficients of rotation of the couple $[1],[2]$, only two are algebraically independent; we can take $\gamma_{121},\gamma_{212}$. They represent the geodesic curvature of curves 1 and 2, respectively.
+
+If we set
+$$\bar{\varphi}_r=\epsilon_{rs}\varphi^{s},$$
+the formula (2.20) can be replaced by
+\begin{equation}
+a^{(rs)}\bar{\varphi}_{rs}=G.
+\end{equation}
+%note: replace \epsilon with \varepsilon everywhere.
+In the last two equations (4.2), let us consider the $\lambda_{2/r}$ as unknowns and suppose at the same time that $\lambda_{1/r}$ are replaced by their values\footnote{We obtain them by solving the two equations $\lambda_1^{(r)}\lambda_{1/r}=1$, $\lambda_1^{(r)}\lambda_{2/r}=1$}
+$$\lambda_{1/r}=\varepsilon_{rs}\lambda_2^{(s)}$$
+and the $\varphi_s$ by those drawn from eqations (4.1). Equation (4.3) therefore constitutes a necessary and sufficient condition for these equations and
+\begin{equation}
+\lambda_{2/r}\lambda_2^{(r)}=1
+\end{equation}
+to form an integrable system. If we designate by $\lambda_{2/r}$ the elements of a particular solution of this algebraic-differential system, the solution is obtained by taking
+$$\lambda_r=\sin\alpha\lambda_{1/r}+\cos\alpha\lambda_{2/r},$$
+where $\alpha$ is a constant. 
+
+For a particular given value of $\alpha$, the $\lambda_r$ are elements of a congruence whose curves, at each point of $V_2$, an angle $\alpha$ with curve 2.
+
+It follows that $\varphi_r$ plays the same role for all congruences that meet a given congruence at a constant angle $\alpha$, no matter the value of $\alpha$.
+
+Such a system is called a \emph{bundle} and $\varphi_r$ (or respectively $\varphi^{(r)}$) is called a \emph{covariant } (or \emph{contravariant}) \emph{vector field of the bundle}.
+
+Equation (4.3) therefore represents the condition for a given system $\varphi_r$ to be the covariant vector field of a bundle.
+
+If $\varphi_r$ and $\psi_r$ are the covariant vector fields of two bundles, their difference $\varphi_r-\psi_r$ has a remarkable geometric significance. They are the derivatives of the angle formed by two curves of the congruence of two bundles. 
+
+By following the rules of the preceeding section, suppose we have constructed all the absolute differential invariants that we can obtain by associating with $\varphi$ the curves of a congruence $[2]$. We can obtain, in the same way, all the expressions that represent the intrinsic properties of a congruence, or even an arbitrary curve in the manifold $V_2$. 
+
+In practice, as we just said, we only find one algebraic invariant (or of order zero), which, in conformity with (4.4), is equal to one. 
+
+Because of (4.2), the differential invariants of the first order are the absolute algebraic invariants, common to the metric tensor and the two linear forms having $\varphi_r$ and $\lambda_{2/r}$ as coefficients. 
+
+There are two of them, for example
+$$J_1=\lambda_2^{(r)}\varphi_r=\gamma_{212},$$
+$$J_2=\varphi^{(r)}\varphi_r=\gamma_{121}^2+\gamma_{212}^2.$$
+To get the second-order invariants, we have the invariant $G$ and the quadratic form having
+$$\psi_{rs}=\frac{1}{2}(\varphi_{rs}+\varphi_{sr}).$$
+as coefficients.
+
+Of the invariants that result, we single out
+$$\vartheta=a^{(rs)}\psi_{rs}=a^{(rs)}\phi_{rs}.$$
+
+Finally, to obtain all the invariants of an arbitrary order $\mu>2$, we must consider once more the derived systems of $G$ and of $\psi_{rs}$ up to the order $\mu-2$.
+
+The proper invariants of the metric tensor represents, as we have stated, the intrinsic properties of the manifold $V_2$; in the same way those that depend also on $\varphi_r$, $\psi_{rs}$, and their derivatives, without however containing the $\lambda_{2/r}$ correspond to intrinsic properties of the bundle, wherein $\varphi_r$ is the integral curve.
+
+Thus the invariant $J_2$ represents the sum of the squares of the geodesic curvatures of two lines belonging to two arbitrary orthogonal congruences of the bundle. It is a property of the bundle that such a sum has the same value for any pair of orthogonal congruences. 
+
+In the same manner, the invariant $\vartheta$ tells us that the difference
+$$\frac{\partial \gamma_{212}}{\partial s_2}-\frac{\partial \gamma_{121}}{\partial s_1}$$
+does not vary based on the pair that is considered; once it is zero (and in this case only when it is zero) all congruences of the bundle are isothermal. From this, we quite naturally get Beltrami's theorem: \emph{If a congruence is isothermal, then all congruences belonging to the same bundle are as well.}
+
+\section{Surfaces in ordinary space}
+
+As we know from $\S1$ of the preceding chapter, to determine all surfaces that admit an expression given by their $ds^2$, it suffices to determine all second-order tensors $b_{rs}$ that satisfy the algebraic-differential system of equations
+\begin{equation*}
+\tag{c}
+b_{rs,t}=b_{rt,s},
+\end{equation*}
+\begin{equation*}
+\tag{g}
+\frac{b}{a}=G,
+\end{equation*}
+where we require
+$$b=b_{11}b_{22}-b_{12}^2$$
+
+After this the coordinates $y_1,y_2,y_3$ of points on the surface, with respect to an arbitrary orthogonal Cartesian system, are the solutions to the system
+\begin{equation*}
+\tag{i}
+a_{rs}=y_{k/r}y_{h/s}
+\end{equation*}
+\begin{equation*}
+\tag{j}
+y_{h/r,s}=z_hb_{rs}
+\end{equation*}
+The $z_h$ being defined by the equations 
+$$z_hy_{h/r}=0, (r=1,2)$$
+$$z_1^2+z_2^2=1$$
+
+It goes without saying that $y_{h/r}$, $y_{h/r,s}$ designate the covariant derivatives of the unknown functions $y_h$. The system (i), (j) is thus completely solvable (since the solvability conditions reduce to (c), (g)). Its general solution depends on six arbitrary constants; they fix the positions of the coordinate axes relative to the surface, or, if we desire, the position of the surface with respect to the axes, once we regard the former as givens and treat our problem as that of finding the form of the surface.	
+
+We thus see that each particular solution of (i), (j) corresponds to a unique surface, determined up to a rigid displacement, which possesses the form $\varphi$ as the square of the expression of its linear element. The equations (i) and (j) can be called the \emph{intrinsic equations} of the surface. The equations, in comparison with (c) and (g) (which we will call the \emph{fundamental equations of the theory of surfaces}), are better suited for the study of the properties of a surface; they lend themselves better to defining the properties of the surface, which they define much better than the equation in finite terms, or are strange elements of the surface itself. 
+
+The equations (c), (g) as well as (i), (j) transform well be letting
+\begin{equation}
+b_{rs}=\sum_{h,k=1}^2\omega_{hk}\lambda_{h/r}\lambda_{k/s},
+\end{equation}
+where the $\omega_{hk}=\omega_{kh}$ designate three invariants and the $\lambda_{1/r}$, $\lambda_{2/r}$ the covariant components of an arbitrary orthogonal couple. 
+
+We can demonstrate that $\omega_{11},\omega_{22},\omega_{12}$ measure, up to a sign, the normal curvatures and the geodesic tensions of the curves 1, 2.
+
+Agreeing for the moment to consider as identical the indices that differ by a multiple of 2, the formulas (c) and (g) are respectively equal to the following\footnote{Einstein summation is not used.}:
+\begin{equation*}
+\tag{$c_1$}
+\frac{\partial \omega_{ii}}{\partial s_{i+1}}-\frac{\partial \omega_{ii+1}}{\partial s_{i+2}}=\sum_{h=1}^2(\omega_{ih}\gamma_{ii+2h}+\omega_{i+1h}\gamma_{hh+1h+1}), (i=1,2)
+\end{equation*}
+\begin{equation*}
+\tag{$g_1$}
+\omega_{11}\omega_{22}-\omega_{12}^2=G.
+\end{equation*}
+
+If we introduce six new unknowns $\xi_1,\xi_2,\xi_3;\eta_1,\eta_2,\eta_3$ by writing simply $(y,\zeta)$ for any of the sysyem $y_k,\zeta_k$ the equations (i) and (j) become
+\begin{equation*}
+\tag{$i_1$}
+\begin{cases}
+&\displaystyle\sum_{h=1}^3\xi_h^2=1,\sum_{h=1}^3\eta_h^2=1,\xi_h\eta_h=0\\
+&y_r=\xi\lambda_{2/r}+\eta\lambda_{1/r}
+\end{cases}
+\end{equation*}
+\begin{equation*}
+\tag{$j_1$}
+\begin{cases}
+&\displaystyle\xi_r=\eta\varphi_r+\zeta\sum_{h=1}^2\omega_{2h}\lambda_{h/r},\\
+&\displaystyle\eta_r=-\xi\varphi_r+\zeta\sum_{h=1}^2\omega_{1h}\lambda_{h/r},
+\end{cases}
+\end{equation*}
+where $\zeta=\sqrt{1-\xi^2-\eta^3}$.
+The unknowns $\xi_1,\xi_2,\xi_3;\eta_1,\eta_2,\eta_3$ are nothing but the direction cosines of the tangents to the curves 1,2; the $\zeta_1,\zeta_2,\zeta_3$ are therefore the cosines of the normals to the surface, always, of course, with respect to the axes $y_1,y_2,y_3$. 
+
+As is was shown in Chapter II, there exists a couple $\lambda_{1/r}$, $\lambda_{2/r}$ such that the expressions (4.5) take a very simple form, that is, their canonical form. This couple corresponds to the lines of curvature of the surface. We have therefore $\omega_{12}=0$, which gives the well-known theorem that the lines of curvature have a geodesic torsion which is identically zero; $\omega_{11},\omega_{22}$, with their signs changed, are the principal curvatures. The $(c_1)$ and $(g_1)$ reduce in this case to the well-known theorems of Codazzi and Gauss. 
+
+We can also suppose $\omega_{22}=0$ (which is always allowed, for a pair of real congruences, only when $G\leq0$). The curves of the congruence $[2]$ are therefore asymptotic; the equation $(g_1)$ define $\omega_{12}$ and the $(c_1)$ carry us to the relations already reported by Raffy\footnote{``Sur le probl\`eme g\'en\'eral de la deformation des surfaces,'' Comptes Rendus, 13 June 1892.}
+
+We must refer the reader to the oft-cited ``Lezioni etc.'' if he wishes to completely account for how the indicated formulas give the most important theorems of this theory. It will be better for us to stop for the moment at an important problem in the theory of isometry, where the absolute differential calculus allows us to completely solve the problem. This will be the object of the following section. 
+
+\section{Surfaces possessing given properties}
+
+Suppose we are given a form $\varphi$: Our problem is to find out if, of the surfaces that admit the form $\varphi$ as their $ds^2$, there exist some that satisfy certain given conditions. For this, it will suffice to conjoin the equations $(c_1),(g_1);(i_1),(j_1)$ those that express analytically the given conditions. The problem therefore reduces to determining the solvability conditions of such a system. If we can satisfy it, we have by the same the equations on which depend the search for new surfaces. This is the classical method, which is able to, for example, decide if, among the surfaces with a given linear element, it is ruled, there is a one with mean constant curvature, etc. We confine ourselves to saying that the known theorems on the deformation of such categories of surfaces are found in a much more natural way using our methods.
+
+We are particularly well served\footnote{\emph{Ricci} ``Sulle teoria intrinseca delle superficie ed in ispecie di quelle di secondo grado,'' Atti dell' Instituto Veneto (Proceedings of the Venetian Institute); ``Lezioni, etc.,'' second part, Chapter 6.} by recognizing, if it exists, and determining, the second-degree surfaces that are embeddable, and possess a given linear element. This problem, which was only resolved for the sphere, is now resolved for an arbitrary quadric. We can, in this manner, with a finite number of simple operations, decide if a given form $\varphi$ can be the metric of a second-degree surface. \emph{There is at most one quadric, up to a rigid motion, that possesses this property.} Once there is one, the rest are effectively determined.
+
+\section{Extension of the theory of surfaces to $n$-dimensional linear spaces}
+
+The considerations of the general order, which were the questions of the preceeding sections, extend easily to $n$-dimensional manifolds contained in a linear space $S_{n+1}$. It seems appropriate to call these \emph{hypersurfaces}. We realize in recalling the formulas (c) and (g) from this chapter that they are one particular case ($n=2$) of those that we encountered in the previous chapter that express that the form $\varphi$ is of the first class.
+
+We can deduce from the aforementioned formulas that an $n$-dimensional hypersurface, whose $ds^2$ is known, is determined in form (ignoring the position in the space $S_{n+1}$), by a second quadratic differential form. If we give the coefficients $b_{rs}$ of the second form expressions analogous to (4.5), we have the fundamental equations
+\begin{equation*}
+\frac{\partial\omega_{hl}}{\partial s_j}-\frac{\partial\omega_{hj}}{\partial s_l}=\omega_{hk}(\gamma_{kjl}-\gamma_{klj})+\omega_{jk}(\gamma_{khl}-\gamma_{khj}),
+\tag{C}
+\end{equation*}
+\begin{equation*}
+\omega_{hk}\omega_{ij}-\omega_{hj}\omega_{ik}=a_{rs,tu}\lambda_h^{(r)}\lambda_k^{(s)}\lambda_i^{(t)}\lambda_j^{(u)}.
+\tag{G}
+\end{equation*}
+
+Besides the cartesian coordinates $y_1,y_2,\cdots,y_{n+1}$ of the points of the hypersurface, it is convenient to introduce the direction cosines of the reference lines of congruence as auxiliary independent variables. In designating the cosine of the angle the line $i$ makes with the $y_h$-axis by $\xi_{ih}$, the intrinsic equations of a hypersurface can be summarized as follows\footnote{Here, $\delta_{ij}=1$ when $i=j$ and is $0$ otherwise.}:
+\begin{equation*}
+\begin{cases}
+&\xi_{ih}\xi_{jh}=\delta_{ij}, (i,i=1,2,\cdots,n)\\
+&y_r=\xi_i\lambda_{i/r},
+\end{cases}
+\tag{I}
+\end{equation*}
+\begin{equation*}
+\xi_{i/r}=\left(\zeta\omega_{ij}+\gamma_{ijl}\xi_l\right)\lambda_{j/r}, (i,r=1,2,\cdots,n)
+\tag{II}
+\end{equation*}
+where, in place of $\xi_i$ we can substitute any of
+$$\xi_{ih}, (h=1,2,\cdots,n+1)$$
+and we have written, for brevity, $\zeta$ instead of
+$$\sqrt{1-\sum_{h=1}^n\xi_h^2}$$.
+
+It is then clear that $\zeta_1,\zeta_2,\cdots,\zeta_{n+1}$ represent the direction cosines of the normal to the hypersurface; the $\gamma$ are the coefficients of rotation with respect to the $n$ reference congruences. 
+
+The invariants $\omega$ also have significance analogous to what we have mentioned for $n=2$. In taking the $b_{rs}$ in their canonical form, the corresponding congruences are formed, as for $n=2$, by the lines of curvature of the hypersurface. It goes without saying that in this case the equations (E), (G); (I), (II) are greatly simplified. 
+
+\section{Groups of motions on an arbitrary manifold}
+
+Let $\varphi$ be the quadratic differential form that defines a metric in the manifold $V_n$. Let us consider an infinitesimal movement, which subjects the points of the manifold to an infinitesimally small displacement $\xi^{(1)},\xi^{(2)},\cdots,\xi^{(n)}$, that is to say, it maps each point $(x_1,x_2,\cdots,x_n)$ to the neighboring position $(x_1+\xi^{(1)},x_2+\xi^{(2)},\cdots,x_n+\xi^{(n)}$. We say such a movement is \emph{rigid}, or without deformation, if the form $\varphi$ admits an infinitesimal transformation
+$$Xf=\xi^{(r)}\frac{\partial f}{\partial x_r}$$
+The conditions that the $\xi^{(r)}$ must be satisfy in order for this to be the case are given by Killing\footnote{See ``Ueber die Grundlagen der Geometrie,'' Crelle's Journal, Vol. CIX, 1892.}
+
+Using the notation of the absolute differential calculus, they are written as:
+\begin{equation*}
+\xi_{r,s}+\xi_{s,r}=0
+\tag{k}
+\end{equation*}
+
+Let 
+$$\xi_r=\varrho\lambda_{r}$$
+be the canonical expression for the $\xi_r$.
+
+The congruence, where $\lambda_r$ is the covariant vector field, is formed by the trajectories of rigid movement, generated by the infinitesimal transformation $Xf$. 
+
+In substituting in equations (k) the canonical expressions for $\xi_r$, we find the following theorem, which is a natural extension of what we get for surfaces.
+
+\emph{For a given congruence $C$ in an arbitrary manifold $V_n$ to result from the trajectories of a rigid movement, it is necessary and sufficient that:
+\begin{enumerate}
+	\item All systems of $n-1$ mutually orthogonal congruences that are also all orthogonal to $C$ are canonical (with respect to $C$).
+	\item Each congruence normal to $C$ must be geodesic, or its geodesic curvature is perpendicular to the line $C$ at each point.
+	\item The congruence $C$ is normal and the family $\infty^1$ of orthogonal hypersurfaces is isothermal. 
+\end{enumerate}}
+When $n=3$, employing the covariant system $E$ (Chapter 1, $\S3$), the equations (k) can be replaced by
+\begin{equation}
+\xi_{r,s}=\epsilon_{rst}\mu^{(t)}
+\tag{$k_0$}
+\end{equation}
+where the $\mu^{(r)}$ are auxiliary unknowns that obviously form a contravariant system.
+
+In the manifold $V_n$ under consideration, let us take an arbitrary orthogonal triple $[1],[2],[3]$ and let us introduce, in place of the $\xi_r$ and $\mu_r$ the invariants $n_i$ and $\vartheta_i$ defined by the equations
+$$\eta_i=\xi^{(r)}\lambda_{i/r}, \vartheta_i=\mu^{(r)}\lambda_{i/r}.$$
+The $k_0$ become
+\begin{equation*}
+\begin{cases}
+&\displaystyle\frac{\partial\eta_i}{\partial s_i}=\gamma_{ihi}\eta_h,\\
+&\displaystyle\frac{\partial\eta_i}{\partial s_{i+1}}=\gamma_{ih(i+1)}\eta_h+\vartheta_{i+2}, (i=1,2,3)\\
+&\displaystyle\frac{\partial\eta_i}{\partial s_{i+2}}=\gamma_{ih(i+2)}\eta_h-\vartheta_{i+1},
+\end{cases}
+\tag{$k_0'$}
+\end{equation*}
+and we get the conditions of integrability (Chap. 2, $\S$)
+\begin{equation*}
+\frac{\partial\vartheta_i}{\partial s_j}=\gamma_{ihj}\vartheta_h+\gamma_{j(j+2)}\eta_{j+1}-\gamma_{j(j+1)}\eta_{j+2}. (i,j=1,2,3)
+\tag{h}
+\end{equation*}
+
+\section{Groups of movements for three-dimensional manifolds}
+\emph{Intrasitive groups.} --- In a manifold $V_3$ a family $\infty^1$ of surfaces $V_2$ can be represented (Chap. 2, $\S3$) by the same system (covariant, for example) that represents the congruence of its orthogonal trajectories. Thus, let us be given one such system and let us propose to find if there are rigid movements in $V_3$ that transform \emph{each} $V_2$ into itself. First of all, we must remark, based on the preceeding discussion, that we can regard the problem as resolved whenever the movement group has one-dimensional orbits; this will be the case for one-parameter groups. 
+
+This being said, let us substitute, in the equations ($k_o'$), (h) or the preceeding section, the congruence $[3]$ for the orthogonal trajectories to the surfaces $V_2$. We get
+\begin{equation}
+\eta_3=0
+\end{equation} 
+and the equations ($k_0'$), for $i=3$, give us
+\begin{equation}
+\gamma_{3h3}\eta_h=0
+\end{equation}
+\begin{equation}
+\vartheta_1=\gamma_{3h2}\eta_h, \vartheta_2=-\gamma_{3h1}\eta_h
+\end{equation}
+If (4.7) is not an identity when taken with (4.6), it gives us the orbits of $\xi_1,\xi_2,\xi_3$ and consequently the trajectories that we are looking for, assuming that this is always possible, that is to say that the conditions of the theorem $\S$ are satisfied. 
+
+If, on the other hand, (4.7) is identically true, we have
+\begin{equation}
+\gamma_{313}=\gamma_{323}=0
+\end{equation}
+which tells us that the congruence $[3]$ is geodesic. 
+Thus, we see that:
+
+\emph{In order that a manifold $V_3$ admit a group of rigid movements of more than one parameter that are invariant for all surfaces of a family $\infty^1$, it must be the case that its surfaces are parallel.}
+
+Let us now remark that, because of equations (4.6) and (4.8), there are only three independent functions, being $\eta_1,\eta_2,$ and $\vartheta_3$. Since the equations ($k_0'$), which remain to be considered, and the (h) give all the first derivatives of these three functions, expressed in terms of the functions themselves and known quantities, we have again:
+
+\emph{The group of rigid movements, that leaves invariant all surfaces in some family $\infty^1$ depends on more than three parameters}
+
+To complete our research, we must completely discuss the simultaneous system (4.6), (4.8), (4.9), ($k_0'$), (h). A convenient choice of the couple $[1],[2]$ makes this easy. We can not, however, reproduce it here. Among the results which it gives, we confine ourselves to listing the following:
+
+\emph{If a manifold $V_3$ admits a group of three parameters of the space just considered, at any point in $V_3$ the principal directions are given by the normal and by the tangents to the surface $V_2$ which passes through the same point; the principal invariants of $V_3$, are invariants of the group and consequently retain the same value on each $V_2$.}
+
+\emph{Transitive Groups} Here are the results obtained in this case, as always, starting from the equations $(k_o')$, (h) of the preceeding section. 
+
+Once $V_3$ admits a group $G$ of more than one parameter, the principal invariants are invariants of the group: 
+
+For this group to be transitive, we must therfore have that the principal invariants are constants. Assume that this is the case and call these invariants $\omega_1,\omega_2,\omega_3$. We must distinguish between the following three cases:
+\begin{enumerate}
+	\item $\omega_1=\omega_2=\omega_3$
+	\item $\omega_2=\omega_3, \omega_1\neq\omega_2$
+	\item $\omega_2=\omega_3, \omega_3\neq\omega_1, \omega_1\neq\omega_2$. 
+\end{enumerate}
+
+In the first case the manifold $V_n$ has constant curvature and the group $G$ has six parameters. In the second case, the invariant $\omega_1$ corresponds to a unqiue and well-determined principal congruence $[1]$; the invariants $\omega_2$ and $\omega_3$ correspond to the all the congruences orthogonal to $[1]$. The group $G$ will be transitive and will have four parameters, provided that it also satisfies the following conditions:
+\begin{enumerate}
+	\item The congruence $[1]$ is geodesic; for all orthogonal congruences $[2]$, the geodesic curvature is simultaneously perpendicular to lines 1 and 2;
+	\item The coefficients of rotation $\gamma_{132}$, $\gamma_{123}$ have constant values of opposite sign. 
+\end{enumerate}
+
+In the last case, the triple $[1],[2],[3]$ of principal congruences of $V_3$ is completely determined. For $G$ to be transitive, it is once again necessary (and sufficient) that the coefficients of rotation of the triple all be constant. When this condition is satisfied, the group has exactly three parameters.
+
+\section{Relations to the research of Lie and Bianchi}
+
+The research which we have just spoken of is intimately linked with those of Lie concerning the Riemann-Helmholtz problem and those of Bianchi on three-dimensional spaces that admit a connected group of motions\footnote{See the Memorie della Societa Italiana delle Scienze, Ser. 3\textsuperscript{a}, Vol. XI, 1897.}. 
+
+Bianchi determined, by using conveniently chosen variables, all the types of groups of movements possible in $V_3$, as well as the corresponding linear elements (expressed in terms of the same variables). 
+
+We have previously considered the following question: 
+
+Given the metric tensor of an arbitrary manifold $V_n$ in generalized coordinates, determine if there are possible rigid movements in this manifold, and determine, if there are, the group that they form by their definitions. 
+
+In this way we fix the criteria that permit us to decide if a given metric tensor falls under one of Bianchi's types. These invariants often assume a very suggestive geometric form.
+
+Our results bring an original contribution to what Lie called the Riemman-Helmholtz problem. 
+
+Recall that in the preceeding section, for these purposes, we considered the first-order systems $\xi^{(r)}$ and $\mu^{(r)}$. When the manifold $V_3$ is Euclidean and $x_1,x_2,x_3$ are the orthogonal Cartesian coordinates, the $\xi$ are the components of the translation and the $\mu$ are the components of the rotation that correspond to the infinitesimal rigid transformation being considered. Based on the results of section 4 of the previous chapter, we can immediately form the components of these vectors for Euclidean space in generalized coordinates. The same expressions are also valid for an arbitrary manifold $V_n$, when we limit ourselves to the (first-order) neighborhood of a given point, since this always belongs to a tangent linear space.
+
+This being said, the defining equations of the group of movements $G$ of a given manifold tell us that:
+
+\emph{In manifolds of constant curvature, and this case alone, there exists an infinitesimally small movement for which the components of transaltion and the components of rotation take the initial values at a given point}
+
+We find here the precise kinematic significance of Riemann's words\footnote{Gesammelte Werke, p. 264.} on his solution to the problem he was concerned with. These are his words, also reproduced in the work of Lie\footnote{\emph{Lie-Engel} Theorie der Transformationsgruppen (Theory of Transformation Groups), Dritter Abschnitt, pp. 289 onwards}:
+
+%credit that this came from other translation
+\emph{The common property of constant curvature manifolds is that figures on them can be moved abitrarily without deformation.}
+
+If we now imagine the manifolds $V_3$ that possess a transitive 4-parameter group of movements $G$, the translation can again be chosen arbitrarily, but the rotation must take place about a given axis; when the transitive group has three parameters, no rotations are possible, and all that remains arbitrary is the translation. 
+
+Finally, note that the results that we have just exposed the complete solution, at least for three-dimensional manifolds, of the question that was the subject of the contest by the Jablonowski Society for the year 1901.
+%add the footnote.
+
+Let us again turn our attention to the fact that we could have gone on without inconvenience into group theory, but we instead prefer to adopt language to better teach the reader about the spirit of the results and their connection with those previously known. 
+
+\chapter{Applications to Mechanics}
+
+\section{First integrals of the equations of dynamics}
+
+Consider a mechanical system with $n$ degrees of freedom and with\\ time-independent constraints. Let
+$$2T=a_{rs}\dot{x}_r\dot{x}_s'$$
+be the expression that gives the kinetic energy of the system. (The overdot, as usual, represents the derivative with respect to time). 
+
+The Lagrangian equations, which define the motion of the system under the action of the give forces, are
+$$\frac{d}{dt}\left(\frac{\partial T}{\partial\dot{x}_h}\right)-\frac{\partial T}{\partial x_h}=X_h, (h=1,2,\cdots,n)$$
+where the $X_h$ are linked to the directly applied forces by well-known relations. 
+
+We can easily see that, when we change the parameters $x_h$, the $X_h$ are covariant. Let us also introduce the reciprocal vector $X^{(h)}$, our fundamental form being of course
+$$2Tdt^2=a_{rs}dx_rdx_s$$.
+
+In solving the Lagrangian equations for the second derivatives of the coordinates, we get\footnote{The $\Gamma_{rs}^i$ are the Christoffel symbols of the second kind; see Chap. I, Section 5}
+\begin{equation}
+\ddot{x}_i=X^{(i)}-\Gamma_{rs}^i\dot{x}_r\dot{x}_s;
+\end{equation}
+which is the form that best suits our goals.
+
+Let $f$ be a function of the $x$ and the $\dot{x}$. In order for
+$$f=C$$
+to be a first integral of the equations, it is necessary and sufficient that $\frac{df}{dt}=0$, that is to say,
+$$\frac{\partial f}{\partial x_i}\dot{x}_i+\frac{\partial f}{\partial\dot{x}_i}\ddot{x}_i$$
+\emph{vanishes identically}, once we replace the $\ddot{x}_i$ with their expressions from (5.1). The condition can therefore be written 
+\begin{equation}
+\frac{df}{dt}=\frac{\partial f}{\partial\dot{x}_i}X^{(i)}+\frac{\partial f}{\partial\dot{x}_i}\dot{x}_i-\frac{df}{d\dot{x}_i}\Gamma_{rs}^i\dot{x}_r\dot{x}_s\equiv0
+\end{equation}
+It is well known\footnote{See for example, \emph{Levi-Civita} ``Sugli integrali algebrici delle equazioni dinamiche,'' Atti della Reale Academia delle Scienze di Torino (proceedings of the Torino royal academy of sciences), Vol. 31, 1896.} that for each integral of the movement of the system under the given forces that is algebraic with respect to the $\dot{x}$, there is a corresponding homogeneous integral (as always, with respect to the $\dot{x}$) for the movement of the same system without forces.
+
+It is because of this that the study of this case acquires a particular significance. From a geometric standpoint, it corresponds to the homogeneous integrals of geodesics, since the trajectories of movement in the absence of forces is nothing but the geodesics of the manifold $V_n$ for which $2Tdt^2$ is the expression for the Riemann metric $ds^2$. 
+
+Let us first apply the formula (5.2) to express that a homogeneous form
+$$f=c_{r_1r_2\cdots r_m}\dot{x}_{r_1}\dot{x}_{r_2}\cdots\dot{x}_{r_m}$$
+of degree $m$, set equal to a constant, gives rise to a first integral of the geodesics. In remarking that the coefficients of $f$ form a symmetric covariant tensor, and referencing formulas (1.20), we can easily go from (5.2) (by setting $X^{(i)}=0$) to
+\begin{equation}
+c_{r_1r_2\cdots r_m,r_{m+1}}\dot{x}_{r_1}\dot{x}_{r_2}\cdots\dot{x}_{r_m}\dot{x}_{r_{m+1}}\equiv0.
+\end{equation} 
+The first covariant derivative of the system $c_{r_1r_2\cdots r_m}$ is then introduced naturally. We can now see the immense simplification that the covariant derivative will bring to this genre of research. 
+
+If, on the other hand, we do not assume that all the $X$ vanish, the conditions that $f=C$ ($f$ being the forme just considered) be a integral of the system (5.1) is equivalent to the condition that both (5.3) and
+\begin{equation}
+c_{r_1r_2\cdots r_m}X^{(r_1)}\dot{x}_{r_1}\dot{x}_{r_2}\cdots\dot{x}_{r_m}
+\end{equation}
+be true. This can be deduced from (5.2), by noting that the terms of different degree must vanish separately and also that the coefficients $c_{r_1r_2\cdots r_m}$ are symmetric with respect to the $m$ indices. In this same line of thought, it follows that by setting the coefficient of each term in (5.4) equal to zero, we get. 
+\begin{equation*}
+c_{r_1r_2\cdots r_m}X^{(r_i)}\equiv0. (r_1,r_2,\cdots,r_m=1,2,\cdots,n)
+\tag{5.4'}
+\end{equation*}
+
+To illustrate these facts, let us consider the conditions for the existence of the linear integrals (linear with respect to the components of the velocity)
+$$c_r\dot{x}_r=C.$$
+The identity (5.3) becomes
+$$c_{r,s}\dot{x}_r\dot{x}_s\equiv0,$$
+or, after a small manipulation,
+\begin{equation}
+c_{r,s}+c_{s,r}=0. (r,s=1,2,\cdots,n)
+\end{equation}
+If it refers to geodesics, there are no other conditions; in general, however, we must also consider (5.4'), which depends on the applied forces. In our case, they reduce to
+\begin{equation}
+c_rX^{(r)}=0.
+\end{equation}
+%the group theory language also need revising
+We have previously seen equations (5.5) (Chapter 4, Section 5); they express that the linear element $\sqrt{2T}dt$ of the manifold admits the infinitesimal transformation $c^{(r)}\frac{\partial f}{\partial x_r}$. This link between linear integrals of geodesics is too well known to merit our stopping here to discuss it.
+
+By putting the system $c_r$ in its canonical form $c_r=\varrho\lambda_r$, we obtain the geometric intepretation of equations (5.5), which was discussed in the previously cited section. The condition (5.6) also takes a simple form; it expresses that \emph{the canonical congruence of a linear integral must be normal to the lines of force.} When the latter can be derived from a potential $U$, that is to say, for $X_i=\frac{\partial U}{\partial x_i}$, we have that the canonical congruence must be equipotential.
+
+Because of their importance, we put off discussion of quadratic integrals until the next section. 
+
+We now spend a bit more time on \emph{particular integrals} or \emph{invariant equations.} This is understood to refer to an equation
+$$f(x_1,x_2,\cdots,x_n;\dot{x}_1,\dot{x}_2,\cdots,\dot{x}_n)=0,$$
+that is satisfied for all values of $t$, if it is satisfied initially. This means that the equation $\frac{df}{dt}=0$ must be a consequence of equations (5.1) and the equation $f=0$ itself. We are then driven to the identity
+\begin{equation}
+\frac{\partial f}{\partial x_i}\dot{x}_i+\frac{\partial f}{\partial\dot{x}_i}\ddot{x}_i\equiv Mf
+\end{equation} 
+where the $\ddot{x}$ are replaced by their values given by (5.1) and the multiplier $M$ is an undetermined function of the $x$ and the $\dot{x}$.  
+
+Let us now turn our attention to the simple case where $f$ is a linear function of the $\dot{x}$. It is therefore permitted to say that the invariant is
+$$\lambda_{n/r}\dot{x}_r=0,$$
+$\lambda_{n/r}$ being the covariant vector of some congruence $[n]$ of the manifold $V_n$. 
+
+The first side of (5.7) is the same as in the case for proper integrals. We therefore have
+$$\lambda_{n/r,s}\dot{x}^r\dot{x}^s+X^{(r)}\lambda_{n/r}\equiv M\lambda_{n/r}\dot{x}_r.$$
+We conclude that the multiplier $M$ can only be of the form $\nu_s\dot{x}_s$, the coefficients $\nu$ being once again undetermined, but functions of only the $x$. The identity can then be written in the following forms:
+\begin{equation}
+X^{(r)}\lambda_{n/r}=0,
+\end{equation}
+\begin{equation}
+\lambda_{n/r,s}+\lambda_{n/s,r}=\nu_r\lambda_{n/s}+\nu_s\lambda_{n/r}. (r,s=1,2,\cdots,n)
+\end{equation}
+Equation (5.8) tells us that the lines of force and those of the congruence cut each other at right angles. As before, for convservative forces, this implies that the congruence $[n]$ is equipotential. To discuss system (5.9) we will imagine that there are $n-1$ congruences to complete the orthogonal moving frame with $[n-1]$. We also set
+$$\omega_i=\nu_r\lambda_i^{(r)}.$$
+Therefore, from (5.9), we can get the equivalent conditions
+\begin{equation*}
+\gamma_{nij}+\gamma_{nji}=\epsilon_{jn}\omega_i+\epsilon_{in}\omega_j, (i,j=1,2,\cdots,n)
+\tag{5.9'}
+\end{equation*}
+where the unknowns $\nu$ are replaced by the $\omega$. 
+
+For $n=2$, there are three equations of the form (5.9'). Two serve to determine $\omega_1,\omega_2$; the third reduces to $\gamma_{211}=0$, which implies that the congruence $[1]$ is geodesic. But, because of (5.8), the congruence $[1]$ is that of the lines of force. Thus, \emph{problems with two degrees of freedom possesses a particular linear integral only when the lines of force are geodesic. This integral expresses that the force and the velocity have the same direction.}
+
+It would not be without interest to establish the conditions under which an linear invariant equation exits for a system with arbitrary degrees of freedom. 
+
+\section{Quadratic integrals of systems without outside forces}
+For a system not under the influence of outside forces, that is to say, the geodesic of the corresponding manifold $V_n$ having the quadratic integral
+$$H=c_{rs}\dot{x}_r\dot{x}_s=\text{const.},$$
+it is necessary and sufficient, by (5.3), that the derivative $c_{rs,t}\dot{x}_r\dot{x}_s\dot{x}_t$ is identically zero. We then get the conditions
+\begin{equation}
+c_{rs,t}+c_{st,r}+c_{tr,s}=0, (r,s,t=1,2,\cdots,n)
+\end{equation}
+For further study it is natural and convenient to introduce the canonical expressions in the place of $c_{rs}$ (Chapter 2, Section 5). 
+\begin{equation}
+c_{rs}=\varrho_h\lambda_{h/r}\lambda_{h/s},
+\end{equation}
+where the $\varrho_h$, as we know, are the roots of the equation $\left\|c_{rs}-\varrho a_{rs}\right\|$. We then find\footnote{Einstein summation is not used here.}
+\begin{equation*}
+(\varrho_h-\varrho_i)\gamma_{hij}+(\varrho_i-\varrho_j)\gamma_{ijh}+(\varrho_j-\varrho_h)\gamma_{jhi}=0 (h,i,j=1,2,\cdots,n; h\neq i\neq j)
+\tag{I}
+\end{equation*}
+\begin{equation}
+\frac{\partial\varrho_h}{\partial s_i}=2(\varrho_h-\varrho_i)\gamma_{ihh}, (i,j=1,2,\cdots,n)
+\tag{II}
+\end{equation}
+which give an intrinsic form to the problem of determining all the kinetic energy forms where the geodesics admit at least one quadratic integral. To obtain these types, we must go back to (I), (II), and the expressions for the linear elements of the manifold $V_n$, where we can have an orthogonal moving frame characterized by the aforementioned equations. The $\varrho$ come in as auxilliary unknowns. Supposing that they are all equal, equations (I) are identically satisfied, and equations (II) become $\frac{\partial\varrho_h}{\partial s_i}=0$, which shows that the value of the $\varrho$ must be constant. The invariants $\gamma$ are not constrained by this hypothesis. Thus, there exists, independent of the orthogonal moving frame and, consequently, the manifold $V_n$, a quadratic integral.
+
+We should expect this; it is the integral of the kinetic energy. Indeed, from (5.11), by setting $\varrho_h=C$, $c_{rs}=C\lambda_{h/r}\lambda_{h/s}=Ca_{rs}$ and the integral $H=\text{const.}$ we find nothing other than $a_{rs}\dot{x}_r\dot{x}_s=\text{const.}$
+
+Like this obvious case, it would seem convenient, when searching for solutions of (I) and (II), to distinguish the cases for all the possibilities relative to the $\varrho$. We then will have to consider separately the case where all the $\varrho$ are distinct, the case where only $n-1$ are, etc., being careful in each case to distinguish the various groupings of possible multiple roots. %not entirely sure about last word 
+
+Such a study has not yet been undertaken in the general case. It would be extremely interesting if the question were completely answered, but, at present, it seems fairly arduous. 
+
+We possess the particular solutions of our system. They correspond to the kinetic energies discovered by St\"ackel\footnote{See in ``les Comptes Rendus'' two remarkable notes of this author (9 March 1893 and 7 October 1895). Also see:\\
+\emph{Di Pirro} ``Sugli Integrali primi quadratici delle equazioni della meccania,'' Annalia di Mathematica, Ser II\textsuperscript{a}, Vol. 24, 1896;\\
+\emph{St\"ackel} ``Ueber die quadratischen Integrale der Differentialgleichungen der Dynamik,'' ibidem, Vol. 25, 1897;\\
+\emph{Painlev\'e} ``Sur les integrales quadratiques des \'equations de la Dynamique,'' Comptes Rendus, 1 February 1897.} (which contains in particular the classic examples of Hamilton and Liouville). We can rediscover them easily based on (I) and (II) by supposing that the congruences of the orthonormal moving frame are normal\footnote{To be exact, we must warn that we are assuming in advance the normality of the congruences of the orthonormal moving frame only when all the $\varrho$ are distinct. Once there are some that are equal, the hypothesis is a bit less restrictive. Cfr.\\
+\emph{Levi-Civita} ``Sur les int\'egrales quadratiques des \'equations de la mechanique,'' Comptes Rendus, 22 February 1897.}
+
+Upon seeing the generality of this class of kinetic energy forms, one could be tempted to believe that they comprise all the solutions to (I) and (II). It is evident for the case $n=2$ (all congruences in this case being normal), but, as soon as we pass to a higher dimension, we easily see that there are other types of solutions\footnote{\emph{Levi-Civita} ``Sur un classe de $ds^2$ \`a trois variables.,'' Comptes Rendus, 21 June 1897}. The real difficulty is in finding all of them. The first step in this direction would be the integration of the system (I), (II) in the case closest to that where all the $\varrho$ are equal and the integration is trivial. This is the case where only two of the $\varrho$ are distinct. 
+
+\section{Liouville Surfaces}
+
+For $n=2$, the equations (I) that were just considered vanish and there remains only the other group, which becomes
+\begin{equation*}
+\begin{cases}
+&\displaystyle\frac{\partial\varrho_1}{\partial s_1}=\frac{\partial\varrho_2}{\partial s_2}=0,\\
+&\displaystyle\frac{\partial\varrho_1}{\partial s_2}=2(\varrho_1-\varrho_2)\gamma_{211}, \frac{\partial\varrho_2}{\partial s_1}=2(\varrho_2-\varrho_1)\gamma_{122}.
+\end{cases}
+\tag{II'}
+\end{equation*}
+From these, assuming that $\varrho_1\neq\varrho_2$, we can draw out the conditions for integrability
+\begin{equation*}
+\frac{\partial\gamma_{211}}{\partial s_1}=\frac{\partial\gamma_{122}}{\partial s_2}=-3\gamma_{211}\gamma_{122}.
+\tag{III}
+\end{equation*}
+Each couple $[1],[2],$ for which the condition (III) is verified gives a quadratic integral $H=\text{const.}$. (distinct from that of the kinetic energy) of the equations of the geodesics of the surface. Let us denote by $\vartheta$ the angle between the curves of the congruence $[2]$ form with the lines of an arbitrary geodesic congruence. We can easily see that the integral $H=\text{const.}$ is equivalent to the following geometric property: along any geodesic
+$$\varrho^2\sin^2\vartheta+\varrho_2\cos^2\vartheta=\text{const.}$$
+We get from equations (III)
+$$\frac{\partial\gamma_{211}}{\partial s_1}-\frac{\partial\gamma_{122}}{\partial s_2}=0,$$
+which expresses (Chapter 4, Section 1) that the couple $[1],[2]$ belongs to an isothermal bundle.
+
+By (II'), it follows without difficulty that by taking the curves of the congruences $[1],[2]$ as coordinates, we can, by a convenient choice of their parameters $u,v$, write the metric as
+$$\varphi=(\varrho_2-\varrho_1)(du^2+dv^2).$$
+
+As the (II') tell us again that the $\varrho_1$ and $\varrho_2$ depend only on $u$ and $v$, respectively, we have that $\varphi$ is a Liouville form. On the other hand, all Liouville forms correspond to a couple $[1],[2]$ (the congruences formed by the coordinate lines) which satisfy the conditions (III). Thus, for the geodesics of a surfaces to possess a quadratic first integral, it is necessary and sufficient that the linear element of the surface is reducible to a Liouville form. 
+%look up age Hannibal assumed command.
+
+Now the problem presents itself: to find if a given linear element can be reduced to the Liouville form, in how many ways, and find the reduced forms, if they exist. The problem is equivalent to finding the number and expressions for distinct quadratic integrals, which belong to the geodesic of a given binary form.
+
+Here are the results of research on the first form:
+\begin{enumerate}
+	\item \emph{Only surfaces of constant curvature possess four-parameter isothermal Liouville systems. (In short, we mean all couples $[1],[2]$ that satisfy (III))} 
+	\item \emph{Surfaces of varying curvature have at most 2-parameter isothermal Liouville systems. There is effectively one class of surfaces that exhibit this property. These are surfaces that are part of surfaces of revolution and also having parallel lines of curvature}
+	\item \emph{There exist surfaces endowed with 1-parameter Liouville systems, and also others for which that system is unique.}
+\end{enumerate}
+
+Koenigs, in a prizewinning essay for the Parisian academy of sciences\footnote{``M\'emoire sur les lignes g\'eod\'esiques,'' M\'emoires des Savants \'Etrangers, Vol. 31, 1894.}, occupied himself with a question intimately linked with those we have just presented, though not indentical. He worked on exhausting all the types of linear elements that lead to \emph{at least two} Liouville systems. In this way, we can also establish some of the preceeding results (those that refer to the number of possible Liouville systems). Koenigs announced these at the same time as Ricci.
+
+\section{Transformations of the equations of dynamics}
+
+The problem (of transforming quadratic differentials) is formulated in the following manner, by Painlev\'e\footnote{``Sur la transformation des \'equations de dynamique,'' Journal de Liouville, 5th Series, Volume 10, 1894.}:
+
+\emph{Given a dynamic system $A$ where the forces do not depend on the velocities, determine if there are corresponding systems $A_1$, and, in the affirmative case, find all of them.}
+
+We say that the corresponding systems of $A$ are all the systems $A_1$ that are independent of the velocities and trace out the same trajectories. 
+
+For corresponding systems we first demonstrate that, if there are no forces acting on the system, then there must also be no external forces on the corresponding system. With this hypothesis, the transformation problem reveals this geometric intepretation:
+
+\emph{Determine all the manifolds $V_n$ that can be represented on a given manifold with conservation of geodesics; that is to say, the sort where each geodesic in $V_n$ corresponds to another in the other representation}
+
+This question was studied by Liouville in his paper ``Sur les \'equations de dynamique''\footnote{Acta Mathematica, Vol. 19, 1895.}. He established remarkably general results, though he did not give a definitive answer to the question. Perhaps it would have been impossible without the absolute differential geometry. We will give an idea of the method that was used following the resolution of this problem\footnote{``Sulle transformazioni delle equazioni dinamiche,'' Annali di Matematica, Series 2, Vol. 24, 1896.}.
+
+Let
+$$\varphi=a_{rs}dx_rdx_s,$$
+be the expression for the $ds^2$ of a given manifold $V_n,$ and
+$$\psi=\alpha_{rs}dx_rdx_s$$
+be the expression for any one of the manifold represented on $V_n$ with conservation of geodesics. We first handle the equations the $\alpha_{rs}$ must satisfy. They are:
+$$2\mu_r\alpha_{rs,t}+2\mu_{,t}\alpha_{rs}+\mu_{,s}\alpha_{rt}+\mu_{,r}\alpha_{st}=0,$$
+where $\mu$ is unknown and we regard $\varphi$ as the metric tensor ($\alpha_{rs,t}$, $\mu_{,r}$, etc. being the covariant derivatives with respect to $\varphi$ of $\alpha_{rs}$ and $\mu$, respectively). 
+
+Calling $a$ and $\alpha$ the discriminants of $\varphi$ and $\psi$ and setting
+$A_{rs}=\mu\alpha_{rs}$
+we can easily get from the preceeding equations
+$$\mu=C\left(\frac{a}{\alpha}\right)^{\frac{1}{n+1}}.$$
+($C$ being some constant) and
+$$A_{rs,t}+A_{st,r}+A_{tr,s}=0,$$ 
+which tells us (Section 2) that
+$$A_{rs}\dot{x}_r\dot{x}_s=\text{const.}$$
+is a quadratic integral for the geodesics of $V_n$. Let us now substitute the canonical forms for the $\alpha_{rs}$, namely
+$$\alpha_{rs}=\varrho_{h}\lambda_{h/r}\lambda_{h/s}.$$
+
+The conditions become the following:
+\begin{equation}
+\begin{cases}
+&\text{(a)}\displaystyle(\varrho_h-\varrho_i)\gamma_{hij}=0, (h\neq i\neq j)\\
+&\text{(b)}\displaystyle2(\varrho_i-\varrho_j)\gamma_{iji}=\frac{\partial\varrho_i}{\partial s_j}, (i\neq j)\\
+&\text{(c)}\displaystyle\frac{\partial(\mu\varrho_i)}{\partial s_j}=0, (i\neq j) (h,i,j=1,2,\cdots,n)\\
+&\text{(d)}\displaystyle\frac{\partial(\mu\varrho_i)}{\partial s_i}+\varrho_i\frac{\partial\mu}{\partial s_i}=0
+\end{cases}
+\tag{E}
+\end{equation}
+The form of this system demonstrates to us that the number, and thus the nature, of these equations that it consists of depends on the number of the distinct roots of the equation $\left\|\alpha_{rs}-\varrho a_{rs}\right\|=0$ and their orders of multiplicity.
+
+Let us first suppose that all the $\varrho$ are distinct. The orthonormal moving frame is in this case completely determined, and because of conditions (a), the coefficients of rotation with three distinct indices must all vanish.
+
+It follows (Chapter 2, Section 3) that all three of the congruences of the orthonormal moving frame are normal, and it is natural to use the corresponding orthogonal hypersurfaces as coordinates. With such a system of coordinates, the metric for the manifold must be of the form
+
+$$\varphi=H_i^2dx_i^2;$$
+
+equations (a) reduce to indentities and (b), (c), and (d) become, respectively,
+
+\begin{equation*}
+\begin{cases}
+&(b_1)\displaystyle2(\varrho_i-\varrho_j)\frac{\partial \log H_i}{\partial x_j}=0, (i\neq j)\\
+&(c_1)\displaystyle\frac{\partial(\mu\varrho_i)}{\partial x_j}=0, (i\neq j) (i,j=1,2,\cdots,n)\\
+&(d_1)\displaystyle\frac{\partial(\mu\varrho_i)}{\partial x_i}+\varrho_i\frac{\partial\mu}{\partial x_i}. 
+\end{cases}
+\end{equation*}
+
+Integration of this system is easy. We are driven to the following result:
+
+Let us denote by $\psi_i$ ($i=1,2,\cdots,n$) an arbitrary function of one variable $x_i$, and by $C$ and $c$ two arbitrary constants. \emph{All linear elements having an expression of the form}
+
+\begin{equation*}
+ds^2=\left(\prod_{i=1}^n{\left|\psi_j-\psi_i\right|}\right)dx_i^2
+\tag{T}
+\end{equation*}
+\emph{allow the following corresponding systems}
+$$ds_1^2=\frac{C}{(\psi_1+c)(\psi_2+c)\cdots(\psi_n+c)}\sum_{i=1}^n{\frac{1}{(\psi_i+c)}\left(\prod_{i=1}^n{\left|\psi_j-\psi_i\right|}\right)dx_i^2}$$
+\emph{which are unique} 
+
+Note that in the products $\displaystyle\prod_{i=1}^n{}$ we must exclude the factor where $i=j$. 
+
+Let us now consider the other extreme case, where each of the $\varrho$ are equal. The $(a)$ are satisfied identically, and the other equations only require that $\mu$ and the common and the common value of the $varrho$ $C$ be constant. The canonical expressions of the $\alpha_{rs}=Ca_{rs},$ from which it follows that the form $\psi$ is nothing but $\phi$, multiplied by a constant. It was evident \emph{a priori} that all forms $\phi$ allow such correspondants. Painlev\'e called them ordinary correspondants for this reason. It is only non-ordinary correspondants that can interest us. 
+
+It is quite clear that outside of these cases the other possible hypotheses with respect to the $\varrho$ lead to non-ordinary correspondants. Each of these hypotheses leads to well-determined types, which we calculate without difficulty by integrating the corresponding equations (E). As it happened for the first type, the geometric interpretation reveals the choice of variables that best lend themselves to integration. 
+
+Returning for the moment to the first case, it is good to note that the quadratic integral, whose existence was proven, takes the form
+$$\sum_{i=1}^n{(\psi_1+c)\cdots(\psi_{i-1}+c)(\psi_{i+1}+c)\cdots(\psi_n+c)\left(\prod_{j=1}^n{\left|\psi_j-\psi_i\right|}\right)\dot{x}_i^2}=\text{const.},$$
+remembering the previous remark concerning the product.
+
+As the value of the first member must be constant \emph{no matter the value of $c$}, each of the coefficients of different powers of $c$ gives us a separate quadratic integral. They number $n$ (and include those of the kinetic energies) and are distinct. 
+
+In general, their number is equal to the number of distincy $\varrho$. 
+
+As it was done for $n=2$, it would not be without importance to establish, at least for $n=3$, the invariant characteristics of manifolds whose linear element is reducible to the type (T) (\emph{generalized Lioville form}). 
+
+More generally, we must not forget that the transformation problem, such as it was posed at the beginning of the section, that is to say, for non-zero forces, still waits to be resolved. Painlev\'e brought some very interesting contributions that exhaust the case $n=2$\footnote{``Sur les transformations des \'equations de la dynamique,'' Comptes Rendus, 24 August 1896. See also two notes by \emph{Viterbi} ``Sulla transformazione delle equazioni della dinamica a due variabili,'' Rendiconti dell' Accademia dei Lincei, 18 Feb. 1900}.
+
+Will it be the job of the absolute differential calculus to get to the bottom? At the moment we can only express hope.
+
+As for the remainder of matters, we have opened before ourselves a vast field of research. 
+
+It suffices to expand, in the way of St\"ackel\footnote{``Ueber transformationen von Bewegungen,'' G\"ottinger Nachrichten, 1898.}, the problem of transformation by requiring not that two dynamical systems $A$, $A_1$ both have all the same trajectories in common, but only one part, that is to say, a set of trajectories depending on a certain number $k(<2n-1)$ of parameters. 
+
+In an article that will be published soon, Malipiero considers on this point the case of geodesics, presenting several remarks not without interest.
+
+\chapter{Applications to physics}
+
+\section{Binary Potentials}
+
+If, in Laplace's equation in Cartesian coordinates
+$$\nabla^2u=\frac{\partial^2u}{\partial x^2}+\frac{\partial^2u}{\partial y^2}+\frac{\partial^2u}{\partial z^2}=0,$$
+we assume the function $u$ is independent of $z$, it becomes
+$$\frac{\partial^2u}{\partial x^2}+\frac{\partial^2u}{\partial y^2}.$$
+which defines a very extensive class of potentials that remain constant along perpendiculars parrallel to the $z$ axis (logarithmic potentials, after M. C. Neumann).
+
+In the same way, taking Laplace's equation in polar coordinates $\varrho,\vartheta,\varphi,$ we can suppose $u$ is independent of $\varphi$ without loss of generality. In fact, once we set $\displaystyle\frac{\partial u}{\partial\varphi}=0$ in
+$$\frac{1}{\varrho^2\sin\vartheta}\left\{\frac{\partial}{\partial\varrho}\left(\varrho^2\sin\vartheta\frac{\partial u}{\partial\varrho}\right)+\frac{\partial}{\partial\vartheta}\left(\sin\vartheta\frac{\partial u}{\partial\vartheta}\right)+\frac{1}{\sin\vartheta}\frac{\partial^2u}{\partial\varphi^2}\right\},$$ 
+there remains no trace of $\varphi$ in the coefficients. In this way, we obtain an important class of integrals of $\nabla^2u$, the symmetric potentials, which are well known due to the research of Beltrami\footnote{See for example ``Sulla teoria delle funzioni potenziali simmetriche,'' Memoire della Accademia di Bologna, Series 4, Vol. 2, 1881.} They remain constant on the circles $\varrho=\text{const.}$, $\vartheta=\text{const.}$ 
+
+We can further assume that $u$ is independent of $\varrho.$ The corresponding potentials 
+$$\frac{\partial}{\partial\vartheta}\left(\sin\vartheta\frac{\partial u}{\partial\vartheta}\right)+\frac{1}{\sin\vartheta}\frac{\partial^2u}{\partial\varphi^2}=0$$
+(as general, though not as important, as those that precede) have the lines passing through the origin as their equipotentials.
+
+It is not permitted to proceed in an analogous fashion with respect to $\vartheta$, since, in assuming that $u$ is independent of $\vartheta,$ we must have each of
+$$\frac{\partial}{\partial\varrho}\left(\varrho^2\frac{\partial u}{\partial\varrho}\right)=0, \frac{\partial^2u}{\partial\varphi^2}=0,$$
+and the integrals of this system (that is to say,
+$$u=\left(c_1+\frac{c_2}{\varrho}\right)\varphi+\left(c_3+\frac{c_4}{\varrho}\right),$$
+the $c$ being constants) do not have the same generality as the ones just discussed. 
+
+These remarks lead us to a question also considered by Volterra\footnote{''Sopra alcuni problemi della teoria del potenziale,'' Annali della Scuola Normale de Pisa, 1883.}:
+
+Let the equation $\nabla^2u=0$, be transformed to arbitrary curvilinear coordinates $x_1,x_2,x_3$. In general, when we set $\displaystyle\frac{\partial u}{\partial x_3}=0$, we cannot rid the reduced equation of the variable $x_3$ (or, if we wish, the two equations $\nabla^2u=0$, $\frac{\partial u}{\partial x_3}$ do not form a complete system of equations). There are cases (we have encountered simple examples) where a similiar circumstance is presented. \emph{Our task is to find all of them}. 
+
+To each of these there correpsonds a class of potentials that depends on two coordinates (\emph{binary potentials}). In our applications, it gives the same simplification as logarithmic or symmetric potentials. Volterra, in the cited paper, studied the general case.
+
+It remains to establish if, other than the known types, there exists others and to find them. 
+
+This is exactly the question that was resolved by Riemann\footnote{``Commentario mathematica, qua etc.,'' Ges. Werke, p. 370.} with respect to the equation for the propogation of heat
+$$\frac{\partial u}{\partial t}+k\nabla^2u=0 (k\text{ being constant)}$$
+But we use the Riemann's method here, because of the extremely complicated formulas. We must find a breach in order to free ourselves from encumbering methods. 
+
+It is once again the absolute differential calculus that gives us the methods. 
+
+Let us now grasp the results of this research\footnote{\emph{Levi-Civita} ``Tipi di potenziali, che si possono far dipendre da due sole coordinate,'' Memoire della Accademia di Torino, Series 2, Volume 49, 1899,}.
+
+Let us remember that a set of binary potentials is entirely defined by its \emph{equipotential congruence}, that is to say, by the congruence
+$$x_1=\text{const.}, x_2=\text{const.}$$
+formed by the lines along which all the members of the set keep a constant value. In fact, once we know this congruence, it suffices to associate the families $x_1(x,y,z)=\text{const.}$, $x_2(x,y,z)=\text{const.}$ with an arbitary third family $x_2(x,y,z)=\text{const.}$ The equation that defines the corresponding potentials is obtained by transforming $\nabla^2u$ into $x_1,x_2,x_3$ coordinates and setting $\frac{\partial u}{\partial x_3}=0$. (The hypothesis that a congruence is equipotential is equivalent to the statement that we can set $\frac{\partial u}{\partial x_3}=0$ in $\nabla^2u$ without being bothered by $x_3$). 
+
+Thus, the problem becomes that of finding all the equipotential congruences in our space.
+
+These congruences (assuming they exist) belong to four categories:
+\begin{enumerate}
+	\item Rectilinear isotropic congruences (as Ribaucour calls them\footnote{See \emph{Bianchi} ``Lezioni di geometria differenzialem,'' Chap. 10; or once again \emph{Levi-Civita} ``Sulle congruenze di curve'' Rendiconti della Accademia dei Lincei, 5 March 1899.})
+	\item Congruences of circles with the same axis
+	\item Congruences of helices
+	\item Congruences of spirals
+\end{enumerate}
+We get a corresponding classification for binary potentials. They are \emph{isotropic}, \emph{symmetric}, \emph{helical}, or \emph{spiral}. 
+
+\emph{Vector Fields}
+
+We have a \emph{vector field} when at each point $P$ in our space, there corresponds a vector $(R)$ having its tail at $P$. 
+
+Let $y_1,y_2,y_3$ be the Cartesian coordinates of $P$, and let $Y_1,Y_2,Y_3$ be the components of $(R)$ following the coordinate axes. The mapping between the points and the vectors in the field expresses itself by the fact that the components $Y_1,Y_2,Y_3$ of $(R)$ are functions of the coordinates $y_1,y_2,y_3$ of the point. It should be understood that these functions are continuous and possess all the derivatives that we need.
+
+Once we have a vector field, it is natural to introduce the scalar quantity
+\begin{equation}
+\Theta=\frac{\partial Y_1}{\partial y_1}+\frac{\partial Y_2}{\partial y_2}+\frac{\partial Y_3}{\partial y_3}.
+\end{equation}
+
+We call it the \emph{divergence} of the field at the point $P$.
+$$\Theta=\text{div}(R).$$
+
+It almost always plays an important role in questions in physics. So, for example, if the vector $(R)$ represents the displacement of the point $P$ in an elastic deformation, $\Theta$ is the cubic dilation of the matter surrounding the point. More generally, once $(R)$ is a flux of any nature, the condensation about the point $P$ is measured by $\Theta$.
+
+If the components $Y_r$ are the derivatives of some function $U$ (in which case we say that the vector field is \emph{potential}), we get
+\begin{equation*}
+\Theta=\nabla^2U.
+\tag{1'}
+\end{equation*}
+
+There is one more vector intimately linked to vector fields, the \emph{curl} $2\omega$ of $(R)$. Its components $2\nu_1,2\nu_2,2\nu_3$ are given by the following formulas:
+\begin{equation}
+\begin{cases}
+&2\nu_1=\frac{\partial Y_3}{\partial y_2}-\frac{\partial Y_2}{\partial y_3},\\
+&2\nu_2=\frac{\partial Y_1}{\partial y_3}-\frac{\partial Y_3}{\partial y_1},\\
+&2\nu_3=\frac{\partial Y_2}{\partial y_1}-\frac{\partial Y_1}{\partial y_2}.
+\end{cases}
+\end{equation}
+As an example of a physical interpretation, let us consider hydrodynamics. Let $(R)$ be the velocity of fluid movement; the rotation of the fluid is defined by the vector $(\omega)$. It is identically zero for distributions with a potential.
+
+Let us now suppose that space is described by arbitrary curvilinear coordinates $x_1,x_2,x_3$.
+
+The question of representing a vector field and its elements presents itself\footnote{\emph{Abraham}, in a recent article, published in this same journal (Vol. 52, 1899, p. 81), also occupied himself with the problem of vector fields in curvilinear coordinates. He always confined himself to orthogonal coordinates using ordinary methods for all his deductions.}.
+
+We can easily define the field by a first-order covariant system $X_r$ whose elements are the components of the vector $(R)$ in Cartesian coordinates. We already know (Chap. 1, $\S4$) how to express the components and projections of $(R)$ along the coordinate lines in terms of the $X_r$. But, to obtain $\Theta$ and $(\omega)$, it is unnecessary to go by intermediary using these projections (and integral transformations), as we usually do. The principles of the absolute differential calculus permit us to find the field\footnote{The same method allows us to almost immediately translate certain integral relations into arbitrary coordinates. This is the case, for example, with the well-known theorems of Green and Stokes. See, for the latter, \emph{Ricci.} ``Del teorema di Stokes in uno spazio qualunque a tre dimensioni e in coordinate generali,'' Atti dell' Istituto Veneto, 1897.}. 
+
+In fact, it suffices to set
+\begin{equation}
+\Theta=a^{(rs)}X_{rs}.
+\end{equation}
+\begin{equation}
+2\mu^{(r)}=	\epsilon^{(rst)}X_{st}\footnote{For the definitions of these symbols, see chapter 1, $\S5$.}. (r=1,2,3)
+\end{equation}
+These can be demonstrated by remarking that $\Theta$ is invariant and that its value in cartesian coordinates $y_1,y_2,y_3$ ($a_{rs}=\epsilon_{rs}$, $X_{rs}=\frac{\partial Y_r}{\partial y_s}$) reduce precisely to (6.1). For potential distributions ($X_r=\frac{\partial U}{\partial x_r}=U_r$), we get $\Theta=a^{rs}U_{rs},$ which is indeed the general form of the Laplacian $\nabla^2U$. This is what we would expect after (6.1'). 
+
+The same vector defined by the contravariant system $\mu^{(r)}$ (or its reciprocal $\mu_r$) is indeed $(\omega)$, since the elements $\mu^{(r)}$, for caresian coordinates, are nothing more than the $\nu_1,\nu_2,\nu_3$ of the formulas (6.2). (Compare also with Chap. 4 $\S9$).
+
+We have already seen (Chap. 3, $\S2$) that we can write the expressions (6.3) and (6.4) in the form
+\begin{equation*}
+\tag{6.3'}
+\Theta=\frac{1}{\sqrt{a}}\frac{\partial(\sqrt{a}X^{(r)})}{\partial x_r},
+\end{equation*}
+\begin{equation*}
+\tag{6.4'}
+2\mu^{(r)}=\frac{1}{\sqrt{a}}\left(\frac{\partial X_{r+2}}{\partial x_{r+1}}-\frac{\partial X_{r+1}}{\partial x_{r+2}}\right)
+\end{equation*}
+(where we have taken the values of $r$ as identical where the differ by a multiply of three). These expressions are sometimes useful in calculations.
+
+In the theory of elasticity and of course electrodynamics, we encounter the vector $(\Omega)$, linked to the fundamental vector field by the relation
+$$(\Omega)=-\nabla\times(\nabla\times(R))=-2(\nabla\times(\omega))$$
+It would be easy to calculate the contravariant system $M^{(r)}$ by reiteration of the formula (6.4), but it is even simpler to take thigs relative to cartesian coordinates. The elements $N^{(r)}=N_r$ of the system in question (components of the vector ($\Omega$)) are, by (6.2), 
+$$N_r=2\left(\frac{\partial \nu_{r+1}}{\partial y_{r+2}}-\frac{\partial \nu_{r+2}}{\partial y_{r+1}}\right)=\frac{\partial}{\partial y_{r+2}}\left(\frac{\partial Y_r}{\partial y_{r+2}}-\frac{\partial Y_{r+2}}{\partial y_r}\right)-\frac{\partial}{\partial y_{r+1}}\left(\frac{\partial Y_{r+1}}{\partial y_r}-\frac{\partial Y_r}{\partial y_{r+1}}\right)$$
+which can be written as
+\begin{equation}
+\displaystyle N_{r}=\sum_{p=1}^3\frac{\partial^2Y_r}{\partial y_p^2}-\frac{\partial}{\partial y_r}\sum_{p=1}^3\frac{\partial Y_p}{\partial y_p}=\sum_{p=1}^3\frac{\partial^2Y_r}{\partial y_p^2}-\frac{\partial\Theta}{\partial y_r}.
+\end{equation}
+If we now set
+\begin{equation}
+M_r=a^{(pq)}X_{rpq}-\frac{\partial\Theta}{\partial x_r},
+\tag{6.5'}
+\end{equation}
+we immediately see that the $M_r$, for cartesian coordinates, are identical to the $N_r$. The system (6.5') is indeed covariant; it is therefore the system we are looking for.
+
+\section{Diverse Examples}
+\emph{Electrodynamics.} In an electromagnetic field, let us denote the electric and magnetic forces at each point $P$ by $F_e$ and $F_m$, respectively.
+
+These forces are in general time-dependent. We shall denote, as usual, the vector whose components are the time derivatives of the components by $\frac{\partial(F_e)}{\partial t}$, and similarly for $F_m$.
+
+This being set out, the equations for a homogeneous isotropic dielectric are, in the form set down by Hertz:
+\begin{equation}
+A\mu\frac{\partial F_m}{\partial t}=\nabla\times (F_e),
+\end{equation}
+\begin{equation}
+A\epsilon\frac{\partial F_e}{\partial t}=-\nabla\times (F_m),
+\end{equation}
+$A,\mu,\epsilon$ being constant.
+
+We can translate these into an explicit form while adopting aribtrary curvilinear co\"ordinates $x_1,x_2,x_3$. It suffices to take recourse in the formulas of the preceeding section. Let us introduce for these purposes the covariant systems $X_r$ and $L_r$ of the vectors $(F_e)$ and $(F_m)$. Equations (6.6) and (6.7), when developed, become
+\begin{equation*}
+A\mu\frac{\partial L_r}{\partial t}=\frac{1}{\sqrt{a}}\left(\frac{\partial X_{r+2}}{\partial x_{r+1}}-\frac{\partial X_{r+1}}{\partial x_{r+2}}\right),
+\tag{6.6'}
+\end{equation*}
+\begin{equation*}
+\tag{6.7'}
+A\epsilon\frac{\partial X_r}{\partial t}=\frac{1}{\sqrt{a}}\left(\frac{\partial L_{r+1}}{\partial x_{r+2}}-\frac{\partial L_{r+2}}{\partial x_{r+1}}\right).
+\end{equation*}
+It may be useful (in the study of vibrations, for example) to separate the laws of variation of each of the two vectors $(F_e), (F_m)$. This can be found by combining equations (6.6) and (6.7), successively eliminating $(F_e), (F_m)$. In this way, we find that
+$$A^2\mu\epsilon\frac{\partial^2(F_m)}{\partial t^2}=A\epsilon\frac{\partial}{\partial t}\nabla\times(F_e)=A\epsilon\nabla\times\frac{\partial(F_e)}{\partial t}=-\nabla\times(\nabla\times(F_m));$$
+In the same way, we find
+$$A^2\mu\epsilon\frac{\partial^2(F_e)}{\partial t^2}=-\nabla\times(\nabla\times(F_e)),$$
+By setting
+$$\Theta_e=\nabla\cdot(F_e),$$
+$$\Theta_m=\nabla\cdot(F_m),$$
+the formulas (6.5') conduct us to the following relations:
+\begin{equation*}
+A^2\mu\epsilon\frac{\partial^2L_r}{\partial t^2}=a^{(pq)}L_{rpq}-\frac{\partial\Theta_m}{\partial x_r},
+\tag{6.6''}
+\end{equation*}
+\begin{equation*}
+A^2\mu\epsilon\frac{\partial^2X_r}{\partial t^2}=a^{(pq)}X_{rpq}-\frac{\partial\Theta_e}{\partial x_r}.
+\tag{6.7''}
+\end{equation*}
+For the ether\footnote{Einstein pointed out that the ether does not exist; the term ``free space'' is the accepted one.} in particular,
+\begin{equation*}
+\begin{cases}
+&\mu=\epsilon=1,\\
+&\Theta_m=\Theta_e=0.
+\end{cases}
+\end{equation*}
+We must now translate the boundary conditions into the generalized co\"ordinates, then, by introducing the polarizations and the current, consider the cases of isotropic dielectrics and of conductors.
+
+In the same way, it would be interesting to present a few applications of the general formulas that we have just established. But this would take us too far off on a tangent. Here we must simply provide the background to allow the reader to orient himself.
+
+\emph{Heat.} The movement of heat within a conductor, when we neglect the phenomena of absorption and of mechanical work, is governed by the equation
+\begin{equation}
+C\varrho\frac{\partial T}{\partial t}=\nabla\cdot(\mathfrak{F});
+\end{equation}
+$C$ and $\varrho$ representing respectively the specific heat and the density, $T$ the temperature, $(\mathfrak{F})$ the heat flux, which corresponds to the surrounded point in the conductor and instant $t$.
+
+The vector $(\mathfrak{F})$ is defined in isotropic bodies by the fact that its component in an arbitrary direction is proportional to the derivative of the temperature $T$ in the same direction. We now have, introducing the cartesian coordinates $y_1,y_2,y_3$ and the corresponding components $Y_1,Y_2,Y_3$ of $(\mathfrak{F}),$
+\begin{equation}
+Y_r=c\frac{\partial T}{\partial y_r}, (r=1,2,3)
+\end{equation}
+where the factor $c$ depends on the co\"ordinates $y_1,y_2,y_3$.
+
+Let us now turn to arbitrary co\"ordinates. We get for the covariant system $X_r$ of $(\mathfrak{F})$
+$$X_r=c\frac{\partial T}{\partial x_r}=cT_r$$,
+and, consequently, making use of (6.3'),
+\begin{equation*}
+C\varrho\frac{\partial T}{\partial t}=c\nabla^2T.
+\tag{6.8'}
+\end{equation*}
+This is a well known result.
+
+Let us consider the more general case of an arbitrary conductor. The relations (6.9), between the components of flux and the derivatives of the temperature, must be replaced by the following:
+\begin{equation*}
+Y^{(r)}=c^{(rp)}\frac{\partial T}{\partial Y_p},
+\tag{6.9'}
+\end{equation*}
+where the $c^{(rp)}=c^{(pr)}$ (\emph{coefficients of conducitivity}) can be arbitrary functions of the $y$.
+
+Here again it is easy to translate equation (6.8) into generalized co\"ordinates. In fact, let us define a second-order contravariant system $c^{(rp)}$ by the condition that its elements reduce precisely to the coefficients of conductivity for the variables $y$. 
+
+The contravariant system corresponding to $(\mathfrak{F})$ can be represented by
+$$X^{(r)}=c^{(pr)}T_p$$.
+(The reason is always the same; that is to say, the system is contravariant and co\"incides with $Y^{(r)}=Y_r$ for the co\"ordinates $y$).
+
+Let us now take $\nabla\cdot(\mathfrak{F})$ under the form $(6.3')$ and we get
+\begin{equation*}
+C\varrho\frac{\partial T}{\partial t}=\frac{1}{\sqrt{a}}\frac{\partial}{\partial x_r}\left(\sqrt{a}c^{(pr)}\frac{\partial T}{\partial x_p}\right),
+\tag{6.8''}
+\end{equation*}
+which is the expression developed in (6.8) in the general case.
+
+Once we assume the conductor is homogeneous, the coefficients of conductivity are constants, but this is not so in general of the $c^{(pr)}$ with respect to arbitrary co\"ordinates; consequently, we cannot take them out of the differentiated part of the second member of (6.8''). It is instead convenient to return to the expression for $\nabla\cdot(\mathfrak{F})$, that is to say,
+$$a_{rs}X^{(rs)}$$.
+When, because of homogeneity, the derivatives with respect to $y$ of the coefficients of conductivity all vanish, we are served by the \emph{contravariant} derivatives of $c^{(pr)}$. The differentiation of
+$$X^{(r)}=c^{(rp)}T_p$$,
+however, gives
+$$X^{(r,s)}=C^{(rp)}a^{(qs)}T_{p,q}$$
+from which we get
+$$\nabla\cdot(\mathfrak{F})=a_{rs}a^{(qs)}c^{(rp)}T_{p,q}=c^{(pq)}T_{p,q},$$
+and finally\footnote{We can also justify this result by the simple remark that the two members are invariants, and their equality is manifest (by (6.8'') and the homogeneity of the conductor) by resorting to cartesian co\"ordinates}
+$$C\varrho\frac{\partial T}{\partial t}=c^{(pq)}T_{p,q}.$$
+This simple therefore applies to homogeneous conductors, but of an arbitrary molecular structure.
+
+\emph{Elasticity.} If $u_r$ are the components following the $y$ axes of the displacement of the points of an elastic medium, the deformation therefore depends, as we know, on the six quantities
+\begin{equation}
+2\alpha_{rs}=\frac{\partial u_r}{\partial y_s}+\frac{\partial u_s}{\partial y_r} (r,s=1,2,3)
+\end{equation}
+($\alpha_rr$ is the linear dilation for the direction $y_r$, $\alpha_{r+1r+2}$ is a translation, or, if we wish, the angular dilation of the two directions $y_{r+1},y_{r+2}$).	
+
+The potential of the elastic forces is a quadratic homogeneous function $2\Pi$ of the $\alpha_{rs}$. Setting
+$$2\Pi=c^{(rspq)}\alpha_{rs}\alpha_{pq},$$
+the coeffecients of elasticity $c^{(rspq)}$($=c^{srpq}=c^{(pqrs)}$ and their permutations) are dependent on the co\"ordinates $y$.
+
+If we designate the components of the force $(F)$ that acts on a unit mass by $Y_r$ (or $Y^{(r)}$, and we designate the density by $\varrho$ and once again set
+\begin{equation}
+\Pi^{(rs)}=\frac{\partial\Pi}{\partial\alpha_{rs}}=c^{(rspq)}\alpha_{pq},
+\end{equation}
+the indefinite equations of elastic equilibrium are written as:
+\begin{equation}
+\frac{\partial\Pi^{(rs)}}{\partial y_s}=\varrho Y^{(s)}. (r=1,2,3)
+\end{equation}
+It is indeed easy to under a valid form for aribitrary co\"ordinates $x_1,x_2,x_3$. With this goal in mind, let us regard $u_r$, $c^{(rspq)}$ as the elements (taken with respect to the chosen co\"ordinates) of two systems: the first being covariant of the first order, the second contravariants of the fourth order.
+
+If we set
+\begin{equation*}
+2\alpha_{rs}=u_{rs}+u_{sr}
+\tag{6.10'}
+\end{equation*}
+the (6.11) define for us a second-order contravariant tensor $\Pi^{(rs)}$.
+
+By again representing the contravariant tensor of force $(F)$ by $X^{(r)}$, the equations we seek will be
+\begin{equation*}
+a_{js}\Pi^{(rsj)}=\varrho x^{(r)}(r=1,2,3)
+\tag{6.11'}
+\end{equation*}
+
+It is now evident, since the same form shows the invariant nature, and also because we find equations (6.12) when we reduce to orthogonal cartesian co\"ordinates.
+
+It is not now the place to go further, but we cannot remain silent on the fact that the theory of elasticity is perhaps one of the places where the methods of the absolute differential calculus are called to offer their best services\footnote{One can consult Ricci. ``Lezioni sulla teoria dell' elasticia,'' which will be published soon.}\footnote{This is particularly funny given the revolutionary changes that general relativity brought about with the aid of tensor analysis.}.
+
+Padoue, December 1899.  
+
+%\theendnotes
+
+
+
+
+\end{document}

@@ -1,0 +1,87 @@
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+  font-size: 62.5%; }
+body {
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222; }
+
+.navlist {
+  display: inline; 
+  float: left;
+  text-align:center;
+  }
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  }
+
+li {
+  list-style-type: none;
+  text-align: center;
+  padding: 0px, 0px;
+   }
+
+.content { margin-left: 15%;
+           margin-bottom: 3%; }
+
+.bar { margin-left: 13%;
+       margin-top: 3%;
+       margin-bottom: 3%; }
+
+  /* Navbar */
+  .navbar-link {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-right: 35px;
+    text-decoration: none;
+    line-height: 65px;
+    color: #222; }
+  .navbar-link.active {
+    color: #33C3F0; }
+
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 10px;
+      padding: 0px 0px;
+   }
+
+   .dropdown:hover .dropdown-content {
+       display: block;
+       float: right;
+   }
+
+  h4 {
+  text-transform: uppercase;
+  font-size: 27px;
+  letter-spacing: .2rem;
+  }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  font-weight: 600; }
+
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: #1EAEDB; }
+a:hover {
+  color: #0FA0CE; }
+
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+table,
+p,
+ul,
+ol  {
+  margin-bottom: 2.5rem; }
