@@ -12,7 +12,7 @@ body {
 .navlist {
   display: inline; 
   float: left;
-  text-align:center;
+  text-align: center;
   }
 
 ul {
@@ -24,9 +24,18 @@ li {
   list-style-type: none;
   text-align: center;
   padding: 0px, 0px;
-   }
+  }
+
+.paperlist {
+  text-align: left;
+  }
+
+.paperlink {
+  text-align: right;
+  }
 
 .content { margin-left: 15%;
+           margin-right: 45%;
            margin-bottom: 3%; }
 
 .bar { margin-left: 13%;
@@ -65,6 +74,13 @@ li {
   letter-spacing: .2rem;
   }
 
+  h6 {
+  text-transform: lowercase;
+  font-size: 25px;
+  letter-spacing: .2rem;
+  margin-bottom: 0px;
+  }
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
   margin-bottom: 50px;
@@ -74,9 +90,10 @@ h1, h2, h3, h4, h5, h6 {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
+  text-decoration: none;
   color: #1EAEDB; }
 a:hover {
-  color: #0FA0CE; }
+  color: #157d9d; }
 
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
