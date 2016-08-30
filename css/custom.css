@@ -86,11 +86,31 @@ li {
   color: #8c8c8c;
   }
 
+figcaption {
+  color: #666666;
+  margin-left: 5px
+  font-weight:500;
+  width: 40%;
+  }
+
+figure {
+  margin-left: 0px;
+  }
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 50px;
   margin-bottom: 0px;
   font-weight: 600; }
 
+img {
+    border: 2px solid #ffffff;
+    border-radius: 7px;
+    width: 40%;
+  }
+
+.fat {
+  width: 45%;
+}
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
