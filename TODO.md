@@ -1,5 +1,7 @@
 - [x] create navbar
-- [ ] create pages for stuff I have
-- [ ] fix icon so it has some mathematical symbol
+- [x] create pages for stuff I have
+- [x] fix icon so it has some mathematical symbol
 - [ ] Create update scripts in Blaze (when new files are added to folders; annotate with date & a comment)
 - [ ] actually update your resume
+- [ ] upload tibetan calligraphy practice
+- [ ] find PMNPT paper and presentation
