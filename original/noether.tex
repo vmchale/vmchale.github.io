@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document}
+
+\title{Noether's Theorem for Functionals Depending on Higher-Order Derivatives}
+\author{Vanessa E. McHale}
+\maketitle
+
+\begin{abstract}
+Presents proofs of some theorems involved in the calculus of variations with fields depending on higher order derivatives. We follow Gelfand and Fomin very closely.
+\end{abstract}
+
+\section{The Euler-Lagrange Equations in general}
+
+Suppose we have a functional of the form $J[u]=\int F(x_i; u_j;\frac{\partial u_j}{\partial x_i};\frac{\partial^2u_j}{\partial x_j x_k};\cdots)dx_1\cdots dx_n$. We wish to find a sufficient condition that it is stationary.
+
+\section{Calculation of $\delta u_{x_i x_j}$}
+
+We get that $$(\bar{\delta u})_{x_ix_j}+\displaystyle\sum_{j,k=1}^nu_{x_i x_j x_k}\delta x_k$$
+
+\section{General Expression for the variation of a functional}
+
+\section{Conserved flows}
+Let us suppose we are given a functional $J[u]$ which is invariant under a transformation of the form
+
+$$x_i^*=\Phi_i(x,u,\partial_iu,\partial_i\partial_ju;\epsilon)~x_i+\epsilon\phi_i(x,u,\partial_i u)$$
+$$u_j^*=\Psi_i(x,u,\partial_iu,\partial_i\partial_ju;\epsilon)~x_i+\epsilon\psi_j(x,u,\partial_i u)$$
+
+that is, $\int F^*(u*)dx^*=\int F(u)dc$.
+
+Then 
+
+$$\sum_{i=1}^n\frac{\partial}{\partial x_i}M=0$$
+
+whenever $u_j$ are chosen to be extremal.  
+
+\end{document}
