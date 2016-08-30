@@ -65,7 +65,7 @@ li {
 
    .dropdown:hover .dropdown-content {
        display: block;
-       float: right;
+       left: 23%;
    }
 
   h4 {
