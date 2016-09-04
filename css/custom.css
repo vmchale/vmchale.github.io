@@ -68,6 +68,10 @@ li {
        left: 23%;
    }
 
+.hide-content {
+    display: none;
+  }
+
 @media (max-width: 1000px) {
    .dropdown:hover .dropdown-content {
        left: 38%;
