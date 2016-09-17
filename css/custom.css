@@ -65,18 +65,20 @@ li {
 
    .dropdown:hover .dropdown-content {
        display: block;
-       left: 23%;
+/*       left: 23%; */
    }
 
 .hide-content {
     display: none;
   }
 
+/*
 @media (max-width: 1000px) {
    .dropdown:hover .dropdown-content {
        left: 38%;
    }
 }
+*/
 
   h4 {
   text-transform: uppercase;
@@ -90,6 +92,14 @@ li {
   letter-spacing: .2rem;
   margin-bottom: 0px;
   }
+
+.pay {
+    font-weight: 200;
+    color: #666666;
+    position: absolute;
+    bottom: 5%;
+    font-size: .75em;
+    }
 
 .date {
   font-weight: 600;
