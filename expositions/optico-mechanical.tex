@@ -19,7 +19,7 @@ Now we can apply the Euler-Lagrange equations for $t$ to this integral to get
 \end{equation}
 Since $t$ does not appear in the integrand, $\displaystyle\frac{\partial(Lt')}{\partial t}=0$, and thus $\displaystyle\frac{\partial(Lt')}{\partial t'}$ is constant with respect to $\tau$.
 
-The generalized momentum $p_i$ for a variable $q_i$ will be defined as $\displaystyle\frac{\partial L}{\partial\dot{q_i}}$; in our case we also consider the momentum associated with time, viz. $\displaystyle p_t=\frac{\partial(Lt')}{\partial t'}.$
+The generalized momentum $p_i$ for a variable $q_i$ will be defined as $\displaystyle\frac{\partial L}{\partial\dot{q_i}}$; in our case we also consider the momentum associated with time, viz. $\displaystyle p_t=\frac{\partial(Lt')}{\partial t'}$.
 
 Now,
 \begin{align*}
@@ -48,9 +48,9 @@ $p_t$ being constant and the $q_i,q_i'$ being independent of $t'$. Also,
 \begin{equation}
 \frac{\partial(p_tt')}{\partial t}-\frac{d}{d\tau}\left(\frac{\partial(p_tt')}{\partial t'}\right)=0
 \end{equation}
-since $\displaystyle\frac{\partial(p_tt')}{\partial t'}=p_t,$ which is constant.
+since $\displaystyle\frac{\partial(p_tt')}{\partial t'}=p_t$, which is constant.
 
-We already know $\displaystyle\delta\int_{\tau_1}^{\tau_2}Lt'd\tau=0,$ so, adding the two, we get $\displaystyle\delta\int_{\tau_1}^{\tau_2}\bar{L}d\tau=0.$ From above, 
+We already know $\displaystyle\delta\int_{\tau_1}^{\tau_2}Lt'd\tau=0$, so, adding the two, we get $\displaystyle\delta\int_{\tau_1}^{\tau_2}\bar{L}d\tau=0$. From above, 
 \begin{equation}
 \bar{L}=Lt'-p_tt'=(L-p_t)t'=\left(\sum_{i=1}^np_i\dot{q_i}\right)t',
 \end{equation}
@@ -58,7 +58,7 @@ so
 \begin{equation}
 \int_{\tau_1}^{\tau_2}\bar{L}d\tau=2\int_{\tau_1}^{\tau_2}Tt'd\tau.
 \end{equation}
-It was pointed out by Jacobi that this cannot be simplified to $\displaystyle\int_{\tau_1}^{\tau_2}\bar{L}d\tau=2\int_{t_1}^{t_2}Tdt,$ because $t$ cannot be treated as an independent variable in the variational problem. Instead, we take advantage of the fact that
+It was pointed out by Jacobi that this cannot be simplified to $\displaystyle\int_{\tau_1}^{\tau_2}\bar{L}d\tau=2\int_{t_1}^{t_2}Tdt$, because $t$ cannot be treated as an independent variable in the variational problem. Instead, we take advantage of the fact that
 \begin{equation}
 T=\frac{1}{2}\left(\frac{ds}{dt}\right)^2
 \end{equation}
@@ -66,7 +66,7 @@ or
 \begin{equation}
 T=\frac{1}{2}\frac{\left(\frac{ds}{d\tau}\right)^2}{t'^2}
 \end{equation}
-Since $T=E-V,$
+Since $T=E-V$,
 \begin{equation}
 t'=\frac{1}{\sqrt{2(E-V)}}\frac{ds}{d\tau},
 \end{equation}
@@ -74,7 +74,7 @@ giving finally
 \begin{equation}
 2\int_{\tau_1}^{\tau_2}Tt'd\tau=\int_{\tau_1}^{\tau_2}\sqrt{2(E-V)}\frac{ds}{d\tau}d\tau=\int_{\tau_1}^{\tau_2}\sqrt{2(E-V)}ds,
 \end{equation}
-as desired. Recalling that $\displaystyle\delta\int_{\tau_1}^{\tau_2}\bar{L}d\tau=0,$ we see that
+as desired. Recalling that $\displaystyle\delta\int_{\tau_1}^{\tau_2}\bar{L}d\tau=0$, we see that
 \begin{equation}
 \delta\int_{\tau_1}^{\tau_2}\sqrt{2(E-V)}ds=0
 \end{equation}
@@ -88,6 +88,6 @@ Rewriting $dt$ as $n ds$, $n$ being the index of refraction, we get
 \begin{equation}
 \delta\int nds=0.
 \end{equation}
-As can be seen, this bears a striking resemblance to Jacobi's principle. If a material has an index of refraction $n(x,y,z)$, then light will travel through it the same way a particle would be affected by a potential field $V(x,y,x)$ provided that $n=\sqrt{2(E-V)}.$ This is not the entirety of the optico-mechanical analogy, but it is part of it. The optico-mechanical analogy was used in the development of the old quantum theory, including de Broglie's Nobel Prize-winning dissertation on matter waves.
+As can be seen, this bears a striking resemblance to Jacobi's principle. If a material has an index of refraction $n(x,y,z)$, then light will travel through it the same way a particle would be affected by a potential field $V(x,y,x)$ provided that $n=\sqrt{2(E-V)}$. This is not the entirety of the optico-mechanical analogy, but it is part of it. The optico-mechanical analogy was used in the development of the old quantum theory, including de Broglie's Nobel Prize-winning dissertation on matter waves.
 
 \end{document}
