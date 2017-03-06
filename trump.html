@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Vanessa McHale</title>
+  <meta name="Projects I have worked on" content="">
+  <meta name="Vanessa McHale" content="">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Navigation bar
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <div class="bar">
+    <ul>
+      <li class="navlist">
+        <a class="navbar-link" href="index.html">Home</a>
+      </li>
+      <li class="navlist">
+        <a class="navbar-link" href="contact.html">Contact</a>
+      </li>
+      <li class="navlist">
+        <div class="dropdown">
+          <a class="navbar-link" href="portfolio.html">Portfolio</a>
+          <div class="dropdown-content">
+            <ul class="dropdown-list">
+              <li><a class="navbar-link" href="portfolio.html#Translations">Translations</a></li>
+              <li><a class="navbar-link" href="portfolio.html#Expositions"> Expositions</a></li>
+              <li><a class="navbar-link" href="portfolio.html#Programming">Programming</a></li>
+              <li><a class="navbar-link" href="portfolio.html#Original">Papers</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="navlist">
+        <a class="navbar-link" href="miscellany.html">Miscellany</a>
+      </li>
+      <li class="navlist">
+        <a class="navbar-link" href="blog.html">Strong Opinions</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="content">
+    <h4>March 2017</h4>
+    <p> For those of you that are just interested in the results of my analysis of Trump's tweets, here you go (results taken from the past 170):
+      <ul class=bulleted>
+        <li class=bulleted>holocaust: 1
+        <li class=bulleted>obama: 14
+        <li class=bulleted>unfair: 1 (when Ivanka's brand was dropped from nordstrom)
+        <li class=bulleted>fake news: 18 (13 of which were all-caps)
+        <li class=bulleted>cnn: 9
+        <li class=bulleted>nytimes: 21 (12.4% of the tweets sampled)
+        <li class=bulleted>america: 16
+        <li class=bulleted>jobs: 7
+        <li class=bulleted>tom brady: 1
+        <li class=bulleted>super bowl: 2
+        <li class=bulleted>superbowl: 2
+        <li class=bulleted>tapp: 1
+        <li class=bulleted>deal: 6
+        <li class=bulleted>chicago: 1 (while threatening to impose martial law)
+        <li class=bulleted>golf: 1
+        <li class=bulleted>ISIS: 1
+        <li class=bulleted>Arnold Schwarznegger: 2
+        <li class=bulleted>obamacare: 3
+        <li class=bulleted>make america great again: 8 (6 in all-caps)
+        <li class=bulleted>russia: 11
+        <li class=bulleted>paul ryan: 0
+        <li class=bulleted>mike pence: 1
+        <li class=bulleted>schumer: 5
+        <li class=bulleted>pelosi: 2
+        <li class=bulleted>SEAL: 0
+        <li class=bulleted>died: 1 (while exculpating self from blame related to raid he ordered not holocaust remembrance day)
+        <li class=bulleted>navy: 0
+        <li class=bulleted>jobs: 7
+        <li class=bulleted>economy: 0
+        <li class=bulleted>growth: 0
+        <li class=bulleted>economic: 0
+        <li class=bulleted>ivanka: 3
+        <li class=bulleted>nordstrom: 2
+        <li class=bulleted>washingtonpost: 3
+        <li class=bulleted>aclu: 0
+        <li class=bulleted>sessions: 5
+        <li class=bulleted>mar-a-lago: 2
+        <li class=bulleted>southern white house: 1
+        <li class=bulleted>failing: 10
+        <li class=bulleted>failing @NYTimes: 10
+        <li class=bulleted>democrats: 8
+        <li class=bulleted>republicans: 1
+        <li class=bulleted>dnc: 4
+        <li class=bulleted>emails: 0 (mercifully)
+        <li class=bulleted>north korea: 2 (once while whining about leaks)
+        <li class=bulleted>melania: 1 (fewer times than Ivanka)
+        <li class=bulleted>trudeau: 5
+        <li class=bulleted>keystone pipeline: 0
+        <li class=bulleted>reince priebus: 0
+        <li class=bulleted>priebus: 0
+        <li class=bulleted>reince: 0
+      </ul>
+    </p>
+    <p>Now on to the dirty (reproducible) details! It's actually pretty easy to use if you have familiarity with the command line/haskell tooling. If you don't have <a href="https://www.haskellstack.org/">stack</a> already, install it from the site or run:</p>
+    <p class=code> <b class="cli">$</b> curl -sSL https://get.haskellstack.org/ | sh</p>
+    <p>Then install the <b>C</b>ommand <b>L</b>ine <b>I</b>nteface <b>T</b>weeter, viz.</p>
+    <p class=code> <b class="cli"><b class="cli">$</b></b> stack install clit --install-ghc</p>
+    <p>Follow the instructions <a target="_blank" href="https://dev.twitter.com/oauth/overview/application-owner-access-tokens">here</a> to get tokens/API keys. Put them in a file as detailed <a target="_blank" href="https://github.com/vmchale/command-line-tweeter#readme">here</a>.
+    <p>With that done, it's pretty easy to mess around. We'll start by capturing as many tweets as possible (3200 is the maximum allowed by the API):</p>
+    <p class=code> <b class="cli">$</b> tweet user -n3200 realDonaldTrump &gt; trumptweets.txt</p>
+    <p>Now verify we got the right thing:</p>
+    <p class=code> <b class="cli">$</b> cat trumptweets.txt | grep -ci "realDonaldTrump"<br>
+	170</p>
+    </p>So for whatever reason we got only the most recent 170 tweets. That's actually okay, because he's repetitive so we can still get some interesting stuff. Anyway, at this point you can search for whatever you want:</p>
+    <p class=code> <b class="cli">$</b> cat trumptweets.txt | grep -ci "Ivanka"<br>
+      3<br>
+      I am so proud of my daughter Ivanka. To be abused and treated so badly by the media, and to still hold her head so high, is truly wonderful!<br>
+      My daughter Ivanka has been treated so unfairly by @Nordstrom. She is a great person -- always pushing me to do the right thing! Terrible!<br>
+      Attending Chief Ryan Owens' Dignified Transfer yesterday with my daughter Ivanka was my great honor. To a great and brave man - thank you! <br>
+      <b class="cli">$</b> cat trumptweets.txt | grep "MAKE AMERICA GREAT AGAIN<br>
+      MAKE AMERICA GREAT AGAIN! https://t.co/kuQiZDz4rA<br>
+      Maybe the millions of people who voted to MAKE AMERICA GREAT AGAIN should have their own rally. It would be the biggest of them all!<br>
+      HAPPY PRESIDENTS DAY - MAKE AMERICA GREAT AGAIN!<br>
+      Enjoy the #SuperBowl and then we continue: MAKE AMERICA GREAT AGAIN!<br>
+      MAKE AMERICA GREAT AGAIN!<br>
+      Professional anarchists, thugs and paid protesters are proving the point of the millions of people who voted to MAKE AMERICA GREAT AGAIN!<br>
+    </p>
+    <a href=portfolio.html>back</a>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
