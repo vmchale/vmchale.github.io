@@ -1,5 +1,25 @@
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+p.code {
+  background-color: #e6e6e6;
+  border-radius: 4px;
+  padding:6px;
+  font-family: monospace;
+/*
+  margin-left:5%;
+  margin-right:30%;
+*/
+  } 
+
+ul.bulleted {
+  list-style-type: circle; 
+}
+
+li.bulleted {
+  text-align: left;
+  list-style-type: circle;
+  }
+
 html {
   font-size: 62.5%; }
 body {
