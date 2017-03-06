@@ -1,5 +1,8 @@
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+b.cli {
+  color:#00cc00;
+  }
 p.code {
   background-color: #e6e6e6;
   border-radius: 4px;
